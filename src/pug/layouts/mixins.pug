@@ -1,0 +1,31 @@
+mixin header-nav(args)
+	.header-top
+		.container
+			.header-top-content
+				button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
+					span toggle menu
+				.header-menu
+					
+					nav.header-nav
+						each item in args
+							a(href=""+ item.link class="header-nav-item "+ item.addClass) #{item.title}
+					.header-search
+						form(action="")
+							.search-input#search-input
+								input(type="text" placeholder="Поиск по сайту")
+							
+							button.search-btn#search-btn
+								i.fas.fa-search
+				.chat-button
+					button Чат с клиникой
+					
+				
+
+//SVG
+mixin bannerLabel1
+	span
+		svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="62" viewbox="0 0 54 62")
+			metadata
+				x:xmpmeta(xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ")
+					rdf:rdf(xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+					rdf:description(rdf:about="")

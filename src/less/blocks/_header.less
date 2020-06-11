@@ -1,0 +1,170 @@
+.header {
+	background-color: #fff;
+	height: 140px;
+}
+
+.header-content {
+	display: flex;
+	align-items: center;
+	height: 140px;
+	justify-content: space-between;
+
+	.logo {
+		margin-right: 70px;
+		width: 115px;
+
+		@media(max-width:1199px) {
+			max-width: 80px;
+			margin-right: 40px;
+		}
+	}
+
+	.contacts-phones {
+		a {
+			height: 30px;
+			white-space: nowrap;
+		}
+
+		margin-right: 45px;
+	}
+
+	.contacts-address {
+		margin-right: 45px;
+
+		p {
+			height: 30px;
+			white-space: nowrap;
+		}
+
+		@media(max-width:991px) {
+			display: none;
+		}
+	}
+
+	.header-button {
+		min-width: 260px;
+
+		button {
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+
+		}
+
+		@media(max-width:1199px) {
+			min-width: 220px;
+		}
+	}
+}
+
+.info-block {
+	display: flex;
+	width: 77%;
+	height: 100%;
+	align-items: center;
+
+	@media(max-width:1199px) {
+		// justify-content: space-between;
+	}
+
+	.contacts-block {
+		display: flex;
+		align-items: center;
+	}
+
+	.contacts-phones {
+		position: relative;
+		padding-left: 25px;
+
+		a {
+			display: block;
+			font-family: @black;
+			font-size: 18px;
+			color: @text;
+
+			@media(max-width:1199px) {
+				font-size: 15px;
+			}
+		}
+
+		&:after {
+			content: '\f095';
+			font-family: 'fontAwesome';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 16px;
+			color: @btn;
+
+		}
+
+		@media(max-width:1199px) {
+			padding-left: 0;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.contacts-address {
+		p {
+			position: relative;
+			padding-left: 25px;
+		}
+
+		p:first-child:after {
+			content: '\f3c5';
+			font-family: 'Font Awesome\ 5 Free';
+			font-weight: 700;
+			position: absolute;
+			left: 0;
+			top: 0px;
+
+			font-size: 14px;
+			color: @btn;
+		}
+
+		p:last-child:after {
+			content: '\f017';
+			font-family: 'fontAwesome';
+			position: absolute;
+			left: 0;
+			top: 0px;
+			font-size: 14px;
+			color: @btn;
+		}
+	}
+}
+
+.header-content {
+	display: flex;
+}
+
+.contacts-social {
+	display: flex;
+
+	a {
+		display: block;
+		font-size: 16px;
+		color: @buttonActive;
+		padding: 10px;
+		margin-right: 5px;
+
+		@media(max-width:1199px) {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	}
+
+	@media(max-width:1199px) {
+		margin-right: 15px;
+
+		a {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+
+	}
+}

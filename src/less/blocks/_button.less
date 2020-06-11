@@ -1,0 +1,132 @@
+.page-button {
+	padding-left: 3.5em;
+	padding-right: 3.5em;
+	font-size: 16px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: @greyBtn;
+	line-height: 50px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	.tr;
+
+}
+
+.page-button2 {
+	position: relative;
+
+	&:hover {
+		background: #60cb62;
+		background: -webkit-linear-gradient(right, #60cb62, #60cb62);
+		background: -moz-linear-gradient(right, #60cb62, #60cb62);
+		background: linear-gradient(to left, #60cb62, #60cb62);
+		.tr;
+		color: @white;
+
+		&:before {
+			border-color: @white;
+		}
+	}
+
+	&:active {
+		background: #60cb62;
+		background: -webkit-linear-gradient(right, #26aa56, #26aa56);
+		background: -moz-linear-gradient(right, #26aa56, #26aa56);
+		background: linear-gradient(to left, #26aa56, #26aa56);
+		.tr;
+		color: @white;
+
+		&:before {
+			border-color: @white;
+		}
+	}
+}
+
+.page-button2:before {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border-top: 1px solid @arrow;
+	border-right: 1px solid @arrow;
+
+	transform: rotate(45deg) translateY(-50%);
+	top: 48%;
+	left: 30px;
+	z-index: 2;
+	display: block;
+}
+
+.page-button--color {
+	.btn-gradient;
+	color: @white;
+
+	&:hover {
+		background: #60cb62;
+		background: -webkit-linear-gradient(right, #60cb62, #60cb62);
+		background: -moz-linear-gradient(right, #60cb62, #60cb62);
+		background: linear-gradient(to left, #60cb62, #60cb62);
+		.tr;
+	}
+
+	&:active {
+		background: #60cb62;
+		background: -webkit-linear-gradient(right, #26aa56, #26aa56);
+		background: -moz-linear-gradient(right, #26aa56, #26aa56);
+		background: linear-gradient(to left, #26aa56, #26aa56);
+		.tr;
+	}
+}
+
+.btn-gradient {
+	background: #60cb62;
+	background: -webkit-linear-gradient(right, #60cb62, #26aa56);
+	background: -moz-linear-gradient(right, #60cb62, #26aa56);
+	background: linear-gradient(to left, #60cb62, #26aa56);
+}
+
+.text-link {
+	position: relative;
+	padding-left: 25px;
+	color: @text;
+	.tr;
+
+	&:hover {
+		color: @buttonActive ;
+
+
+		&:before {
+			right: 0;
+		}
+	}
+
+}
+
+.text-link:before {
+	content: '';
+	position: absolute;
+	left: 25px;
+	bottom: -2px;
+	display: block;
+	// right: 0;
+	// width: 0;
+	height: 1px;
+	background-color: @btn;
+
+}
+
+.text-link:after {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border-top: 1px solid @arrow;
+	border-right: 1px solid @arrow;
+
+	transform: rotate(45deg) translateY(-50%);
+	top: 40%;
+	left: 0px;
+	z-index: 2;
+	display: block;
+}
