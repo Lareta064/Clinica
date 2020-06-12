@@ -1,0 +1,47 @@
+- var listItems = ['Андрология', 'Гастроэнтерология','Гинекология ','Гирудотерапия ','Дерматология ','Диетология ','Кардиология ','Колопроктология ','Консультации по грудному вскармливанию ','Косметология ','Маммология ','Мануальная терапия','Массаж ','Неврология','Ортопедия ','Отоларингология ','Офтальмология ','Психиатрия ','Психотерапия']
+
+-;
+section.our-service
+	.container
+		h2.section-title Услуги медицинского центра
+		.service-tabs
+			input#tab-btn-1(type="radio" name="tab-btn" checked="")
+			label(for="tab-btn-1") Взрослое отделение
+				span.label-img IC
+			input#tab-btn-2(type="radio" name="tab-btn")
+			label(for="tab-btn-2") Детское отделение
+				span.label-img IC
+			
+			input#tab-btn-3(type="radio" name="tab-btn" )
+			label(for="tab-btn-3") Хирургия
+				span.label-img IC
+			input#tab-btn-4(type="radio" name="tab-btn" )
+			label(for="tab-btn-4") Центр планирования семьи
+				span.label-img IC
+			
+
+			#content-1.serv-content
+				p Консультация и лечение
+				.serv-list
+					+service-col(listItems)
+					+service-col(listItems)
+					+service-col(listItems)
+					
+			#content-2.serv-content
+				p Консультация
+				.serv-list
+					+service-col(listItems)
+					+service-col(listItems)
+					+service-col(listItems)
+			#content-3.serv-content
+				p Консультация и лечение
+				.serv-list
+					+service-col(listItems)
+					+service-col(listItems)
+					+service-col(listItems)
+			#content-4.serv-content 
+				p Консультация
+				.serv-list
+					+service-col(listItems)
+					+service-col(listItems)
+					+service-col(listItems)

@@ -1,0 +1,133 @@
+.our-service {
+	padding-top: 90px;
+
+	.service-tabs {
+		padding-bottom: 50px;
+	}
+
+	.service-tabs>input[type="radio"] {
+		display: none;
+	}
+
+	.service-tabs>input[type="radio"]:checked+label {
+		background-color: @btn;
+		color: @white;
+	}
+
+	.service-tabs>div {
+		/* скрыть контент по умолчанию */
+		display: none;
+		padding-top: 30px;
+
+
+	}
+
+	/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+	#tab-btn-1:checked~#content-1,
+	#tab-btn-2:checked~#content-2,
+	#tab-btn-3:checked~#content-3,
+	#tab-btn-4:checked~#content-4 {
+		display: block;
+	}
+
+	.service-tabs>label {
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+		user-select: none;
+		background-color: @greyBtn;
+		border: 1px solid transparent;
+		padding: 15px 30px;
+		padding-left: 50px;
+		font-size: 16px;
+		line-height: 1.5;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+		margin-left: 6px;
+		cursor: pointer;
+		position: relative;
+		margin-bottom: 0;
+
+		@media(max-width:991px) {
+			width: 330px;
+			margin-bottom: 15px;
+
+			&:nth-child(odd) {
+				margin-left: 0;
+			}
+
+		}
+
+		@media(max-width:767px) {
+			width: 100%;
+			max-width: 330px;
+
+			&:nth-child(even) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			&:nth-child(odd) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			display: block;
+
+		}
+
+		&:hover {
+			background-color: @btn;
+		}
+
+		span {
+			position: absolute;
+			top: 15px;
+			left: 20px;
+			color: #fff;
+
+		}
+	}
+
+	.service-tabs>label:first-of-type {
+		margin-left: 0;
+
+		@media(max-width:767px) {
+			margin-left: auto;
+		}
+	}
+
+	.serv-list {
+		display: flex;
+		justify-content: space-between;
+
+		@media(max-width:768px) {
+			display: block;
+		}
+
+	}
+
+	.serv-content {
+		p {
+			font-size: 16px;
+			left: 26px;
+			margin-bottom: 5px;
+		}
+	}
+
+	.serv-list-col {
+		width: 31%;
+
+		a {
+			display: block;
+			font-size: 14px;
+			margin-bottom: 3px;
+			width: fit-content;
+		}
+
+		@media(max-width:768px) {
+			width: 100%;
+		}
+	}
+
+
+}

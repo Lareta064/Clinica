@@ -55,6 +55,11 @@ mixin benefitsItem(imgSrc, title,desk)
 		.benefit-item__text
 			p #{desk}
 
+mixin service-col(items)
+	.serv-list-col
+		each item in items
+			a(href="#").text-link #{item}
+
 //SVG
 mixin bannerLabel1
 	span
