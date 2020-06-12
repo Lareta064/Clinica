@@ -69,7 +69,9 @@ p {
 }
 
 img {
-	max-width: 100%
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 input {
@@ -88,6 +90,10 @@ button {
 
 }
 
+section {
+	padding-top: 60px;
+}
+
 .tr {
 	transition: .3s;
 }
@@ -95,17 +101,46 @@ button {
 .section-title {
 	font-size: 2em;
 	position: relative;
+	margin-bottom: 2em;
 }
 
 .section-title:after {
 	content: '';
 	position: absolute;
 	left: 0;
-	bottom: 10px;
+	bottom: 4px;
 	background-color: @btn;
 	border-radius: 4px;
 	width: 81px;
 	height: 9px;
 	z-index: -1;
 
+}
+
+.section-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.section-title {
+		margin-bottom: 0;
+	}
+
+	a {
+		padding-left: 25px;
+	}
+
+	@media(max-width:574px) {
+		flex-direction: column;
+
+		a {
+			margin-left: auto;
+			margin-top: 25px;
+		}
+	}
+}
+
+.text-14 {
+	font-size: 14px;
+	line-height: 20px;
 }

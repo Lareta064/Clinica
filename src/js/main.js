@@ -14,4 +14,20 @@ $(document).ready(function () {
             this.closest('.header-search').classList.toggle('active');
         }
     })
+
+    /*SLIDER - BANNER */
+    let banner1 = document.querySelector('.banner1');
+    if (banner1) {
+        $('.banner-wrapper').owlCarousel({
+            items: 1,
+            // autoplay: true,
+            loop: true,
+            dots: true,
+            autoplaySpeed: 1200,
+            URLhashListener: true,
+            autoplayHoverPause: true,
+            smartSpeed: 1200,
+            navSpeed: 1200
+        })
+    }
 })

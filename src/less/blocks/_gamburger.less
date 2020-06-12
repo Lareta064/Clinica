@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   /* width: 108px; */
-  min-width: 40px;
+  min-width: 30px;
   height: 40px;
   font-size: 0;
   text-indent: -9999px;
@@ -21,6 +21,12 @@
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
   margin-right: 30px;
+
+  @media(max-width:574px) {
+    min-width: 40px;
+    max-width: 40px;
+    margin-right: 15px;
+  }
 }
 
 .cmn-toggle-switch:focus {

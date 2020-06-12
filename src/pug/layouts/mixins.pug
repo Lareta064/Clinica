@@ -4,11 +4,32 @@ mixin header-nav(args)
 			.header-top-content
 				button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
 					span toggle menu
+				.mobile-logo
+					a(href="#")
+						img(src="img/logo.png", alt="logo" width="60")
+				.mobile-phone
+					a(href="tel:+74992140000") +7(499) 214-00-00
 				.header-menu
 					
 					nav.header-nav
 						each item in args
-							a(href=""+ item.link class="header-nav-item "+ item.addClass) #{item.title}
+							if item.addClass
+								a(href=""+ item.link class="header-nav-item "+ item.addClass) #{item.title}
+							else
+								a(href=""+ item.link class="header-nav-item") #{item.title}
+						.d-block.d-md-none.contacts-block.contacts-block--mobile
+							.contacts-phones
+								a(href="tel:+74992140000") +7(499) 214-00-00
+								a(href="tel:+74992140000") +7(499) 214-00-00
+							.contacts-address
+								p Москва, г. Зеленоград, к. 1130
+								p Открытие до 21-00
+							.contacts-social
+								a(href="#").fab.fa-facebook-f
+								a(href="#").fab.fa-vk
+								a(href="#").fab.fa-instagram
+								a(href="#").fab.fa-odnoklassniki
+
 					.header-search
 						form(action="")
 							.search-input#search-input
@@ -18,8 +39,21 @@ mixin header-nav(args)
 								i.fas.fa-search
 				.chat-button
 					button Чат с клиникой
-					
-				
+mixin ourSpecialistCard
+	.card-doctor
+		.card-img
+			img(src="img/doctor1.png", alt="img")
+		.card-text
+			h3 Мария Кравцова
+			p Главврач
+mixin benefitsItem(imgSrc, title,desk)
+	.benefit-item
+		.benefit-item__img
+			img(src="img/"+ imgSrc, alt="icon")
+		.benefit-item__title
+			p #{title}
+		.benefit-item__text
+			p #{desk}
 
 //SVG
 mixin bannerLabel1

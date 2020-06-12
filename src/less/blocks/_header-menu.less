@@ -1,6 +1,48 @@
 .header-top {
 	height: 50px;
 	background-color: @btn;
+
+	@media(max-width:767px) {
+		padding-top: 5px;
+	}
+}
+
+.mobile-phone {
+	font-size: 15px;
+	white-space: nowrap;
+	display: none;
+
+	@media(max-width:767px) {
+		display: block;
+
+		a {
+			color: @white;
+
+			&:hover {
+				color: @white;
+			}
+		}
+	}
+}
+
+.mobile-logo {
+	display: none;
+
+	@media(max-width:767px) {
+		display: block;
+		min-width: 50px;
+		max-width: 50px;
+		margin-right: 15px;
+
+	}
+
+	@media(max-width:424px) {
+
+		min-width: 40px;
+		max-width: 40px;
+
+
+	}
 }
 
 .header-top-content {
@@ -82,10 +124,17 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 100%;
+	// width: 100%;
 
 	@media(max-width:991px) {
 		position: relative;
+	}
+
+	@media(max-width:767px) {
+		position: absolute;
+		top: -25px;
+		right: -10px;
+		width: calc(~'100vw - 55px');
 	}
 
 
@@ -107,6 +156,10 @@
 			width: 100%;
 		}
 
+		@media(max-width:767px) {
+			width: 0%;
+		}
+
 
 
 	}
@@ -124,8 +177,6 @@
 		color: @white;
 		width: 100%;
 		height: 50px;
-		padding-left: 15px;
-		padding-right: 15px;
 		background-color: @btn;
 
 		&::placeholder {
@@ -153,11 +204,22 @@
 			color: @white;
 			font-size: 17px;
 		}
+
+		@media(max-width:767px) {
+			min-width: 35px;
+			max-width: 35px;
+			height: 50px;
+		}
 	}
 }
 
 .header-search.active {
 	z-index: 10;
+
+	.search-input input {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 .chat-button {
@@ -178,5 +240,22 @@
 			margin-left: 20px;
 		}
 
+	}
+
+	@media(max-width:767px) {
+		display: none;
+	}
+}
+
+.contacts-block--mobile {
+	.contacts-phones {
+
+		a {
+			display: block;
+			font-family: @black;
+			font-size: 18px;
+			color: @text;
+
+		}
 	}
 }
