@@ -59,7 +59,11 @@ mixin service-col(items)
 	.serv-list-col
 		each item in items
 			a(href="#").text-link #{item}
-
+mixin newCard(title)
+	.news-cards__item
+		h4 #{title}
+		h3 Поможем всем городом
+		p Тимуру всего 1 год, а Жене недавно исполнилось 3 года - два мальчика. Две семьи. Два разных диагноза. Но одно общее желание - ЖИТЬ полноценной и счастливой жизнью
 //SVG
 mixin bannerLabel1
 	span

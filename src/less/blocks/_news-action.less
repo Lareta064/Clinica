@@ -1,10 +1,21 @@
 .news {
 	padding-bottom: 50px;
 
+	.section-title {
+		margin-bottom: 10px;
+
+		@media(max-width:574px) {
+			margin-bottom: 40px;
+		}
+	}
+
 	.news-tabs {
-		max-width: 350px;
-		margin-left: auto;
-		margin-right: auto;
+		text-align: right;
+
+
+		@media(max-width:574px) {
+			text-align: left;
+		}
 	}
 
 	.news-tabs>input[type="radio"] {
@@ -15,9 +26,9 @@
 	.news-tabs>div {
 		/* скрыть контент по умолчанию */
 		display: none;
-		border: 1px solid #eee;
-		padding: 10px 15px;
-		border-radius: 4px;
+		padding: 10px 0px;
+		padding-top: 50px;
+
 	}
 
 	/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
@@ -39,9 +50,69 @@
 		margin-left: 6px;
 		cursor: pointer;
 
+		@media(max-width:574px) {
+			margin-left: 0;
+		}
+
 	}
 
 	.news-tabs>label:first-of-type {
 		margin-left: 0;
 	}
+
+}
+
+.news-cards {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media(max-width: 991px) {
+		flex-wrap: wrap;
+	}
+
+	@media(max-width: 767px) {
+		flex-direction: column;
+	}
+}
+
+.news-cards__item {
+	text-align: left;
+	padding: 20px 15px 15px;
+	width: 24.5%;
+	max-width: 300px;
+	background-color: #f3f3f3;
+
+	@media(max-width:991px) {
+		width: 49%;
+		margin-bottom: 15px;
+		max-width: 570px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media(max-width:767px) {
+		width: 100%;
+	}
+
+	h4 {
+		font-size: 15px;
+	}
+
+	h3 {
+		font-size: 24px;
+		margin-top: 15px;
+		margin-bottom: 14px;
+		line-height: 1.2;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 21px;
+	}
+}
+
+.news-cards__item:nth-child(odd) {
+	.btn-gradient;
+	color: @white;
 }
