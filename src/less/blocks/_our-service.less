@@ -2,7 +2,11 @@
 	padding-top: 90px;
 
 	.service-tabs {
-		padding-bottom: 50px;
+		padding-bottom: 110px;
+
+		@media(max-width:767px) {
+			padding-bottom: 50px;
+		}
 	}
 
 	.service-tabs>input[type="radio"] {
@@ -100,7 +104,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@media(max-width:768px) {
+		@media(max-width:767px) {
 			display: block;
 		}
 
@@ -124,10 +128,98 @@
 			width: fit-content;
 		}
 
-		@media(max-width:768px) {
+		@media(max-width:767px) {
 			width: 100%;
 		}
 	}
 
+	.serv-cards {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
+		@media(max-width:767px) {
+			flex-direction: column;
+		}
+	}
+
+	.serv-card-item {
+		width: 100%;
+		max-width: 350px;
+		position: relative;
+		padding: 20px;
+		height: 200px;
+
+		&:after {
+			content: '';
+			width: 12px;
+			height: 12px;
+			border-top: 1.5px solid @white;
+			border-right: 1.5px solid @white;
+			position: absolute;
+			left: 20px;
+			bottom: 20px;
+			transform: rotate(45deg);
+		}
+
+		p {
+			width: 55%;
+			font-size: 28px;
+			color: @white;
+			line-height: 1.3;
+		}
+
+		.serv-card-img {
+			position: absolute;
+			bottom: 0;
+			right: -10px;
+			width: 60%;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		@media(max-width:1199px) {
+			max-width: 300px;
+		}
+
+		@media(max-width:991px) {
+			width: 33%;
+			height: 150px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+
+			p {
+				font-size: 28px;
+				width: 100%;
+			}
+
+			.serv-card-img {
+				display: none;
+			}
+		}
+
+		@media(max-width:767px) {
+			width: 100%;
+			max-width: 350px;
+			margin-left: auto;
+			margin-right: auto;
+
+		}
+	}
+
+	.serv-card1 {
+		background-color: @btn;
+
+	}
+
+	.serv-card2 {
+		background-color: #f37070;
+		;
+	}
+
+	.serv-card3 {
+		background-color: #81b9d9;
+	}
 }

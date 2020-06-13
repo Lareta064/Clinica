@@ -1,0 +1,47 @@
+.news {
+	padding-bottom: 50px;
+
+	.news-tabs {
+		max-width: 350px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.news-tabs>input[type="radio"] {
+		display: none;
+	}
+
+
+	.news-tabs>div {
+		/* скрыть контент по умолчанию */
+		display: none;
+		border: 1px solid #eee;
+		padding: 10px 15px;
+		border-radius: 4px;
+	}
+
+	/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+	#news-btn-1:checked~#news-1,
+	#news-btn-2:checked~#news-2,
+	#news-btn-3:checked~#news-3 {
+		display: block;
+	}
+
+	.news-tabs>label {
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+		user-select: none;
+
+		border: 1px solid transparent;
+
+
+		margin-left: 6px;
+		cursor: pointer;
+
+	}
+
+	.news-tabs>label:first-of-type {
+		margin-left: 0;
+	}
+}

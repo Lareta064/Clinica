@@ -30,6 +30,7 @@ $(document).ready(function () {
             navSpeed: 1200
         })
     }
+    // VIDEO-SLIDER
     $('.video-blog').owlCarousel({
         items: 1,
         merge: true,
@@ -50,4 +51,11 @@ $(document).ready(function () {
             }
         }
     });
+    // REVIEW-SLIDER
+    $('.review-slider').owlCarousel({
+        items: 1,
+        center: true,
+        nav: true,
+        navSpeed: 1200
+    })
 })
