@@ -41,6 +41,7 @@ $(document).ready(function () {
 
             items: 1,
             nav: true,
+            dots: false,
             navSpeed: 1000,
             onInitialized: counter, //When the plugin has initialized.
             onTranslated: counter //When the translation of the stage has finished.
@@ -85,12 +86,13 @@ $(document).ready(function () {
     // VIDEO-SLIDER
     $('.video-blog').owlCarousel({
         items: 1,
-        merge: true,
         loop: true,
         margin: 10,
         video: true,
         lazyLoad: true,
-        center: true,
+
+        dots: false,
+        nav: true,
         responsive: {
             320: {
                 items: 1
