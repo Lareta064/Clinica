@@ -37,8 +37,8 @@ mixin header-nav(args)
 							
 							button.search-btn#search-btn
 								i.fas.fa-search
-				.chat-button
-					button Чат с клиникой
+				//- .chat-button
+				//- 	button Чат с клиникой
 mixin ourSpecialistCard
 	.card-doctor
 		.card-img
@@ -60,10 +60,50 @@ mixin service-col(items)
 		each item in items
 			a(href="#").text-link #{item}
 mixin newCard(title)
-	.news-cards__item
+	.news-cards__item.card-item
 		h4 #{title}
 		h3 Поможем всем городом
 		p Тимуру всего 1 год, а Жене недавно исполнилось 3 года - два мальчика. Две семьи. Два разных диагноза. Но одно общее желание - ЖИТЬ полноценной и счастливой жизнью
+
+mixin newCard2
+	.news-card2.card-item
+		.news-card2__img
+			img(src="img/news.jpg", alt="photo")
+		.news-card2__text
+			.news-date
+				p 09.06.2020
+			.news-title
+				p Поможем всем городом!
+mixin programmContent
+	.row
+		.col-md-4
+			a(href="#").programm-card(style="background-image: url(img/family.jpg)")
+				.programm-card__text
+					.label
+						p  Программа
+					h4 Моя семья
+					p Годовая программа обслуживания Вашей семьи
+					.price
+						p от 30 000 р
+		.col-md-4
+			a(href="#").programm-card(style="background-image: url(img/family.jpg)")
+				.programm-card__text
+					.label
+						p  Программа
+					h4 Моя семья
+					p Годовая программа обслуживания Вашей семьи
+					.price
+						p от 30 000 р
+		.col-md-4
+			a(href="#").programm-card(style="background-image: url(img/family.jpg)")
+				.programm-card__text
+					.label
+						p  Программа
+					h4 Моя семья
+					p Годовая программа обслуживания Вашей семьи
+					.price
+						p от 30 000 р
+
 //SVG
 mixin bannerLabel1
 	span

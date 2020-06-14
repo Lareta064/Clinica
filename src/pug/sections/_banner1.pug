@@ -1,44 +1,42 @@
-section.banner1
-	.banner1-content
+section.banner.banner1
+	//слайдер #1
+	.banner-content
 		.banner-wrapper.owl-carousel
-			.banner-slide(data-hash="cat1")
+			.banner-slide(style="background-image: url(img/banner1.jpg)")
 				.container
 					h1.title-1 Многопрофильный <br> лечебно—диагностический  медицинский центр
-				img(src="img/banner1.jpg", alt="slider")
-			.banner-slide(data-hash="cat2")
+				//- img(src="img/banner1.jpg", alt="slider")
+			.banner-slide(style="background-image: url(img/banner1.jpg)")
 				.container
 					h1.title-1 Многопрофильный
 						|
 						br
 						| лечебно—диагностический  медицинский центр
-				img(src="img/banner1.jpg", alt="slider")
-			.banner-slide(data-hash="cat3")
+				//- img(src="img/banner1.jpg", alt="slider")
+			.banner-slide(style="background-image: url(img/banner1.jpg)")
 				.container
 					h1.title-1 Многопрофильный<br> лечебно—диагностический  медицинский центр
-				img(src="img/banner1.jpg", alt="slider")
-			.banner-slide(data-hash="cat4")
-				.container
-					h1.title-1 Многопрофильный<br> лечебно—диагностический  медицинский центр
-				img(src="img/banner1.jpg", alt="slider")
-		ul.banner-controls
-			li
-				a(href="#cat1").banner-label
-					.banner-label__icon
-						+bannerLabel1
-					.banner-label__text Взрослое отделение
-			li
-				a(href="#cat2").banner-label
-					.banner-label__icon
-						+bannerLabel1
-					.banner-label__text Детское отделение
-			li
-				a(href="#cat3").banner-label
-					.banner-label__icon
-						+bannerLabel1
-					.banner-label__text Центр планирования семьи
-			li
-				a(href="#cat4").banner-label
-					.banner-label__icon
-						+bannerLabel1
-					.banner-label__text Центр абулаторной хирургии
-			
+				//- img(src="img/banner1.jpg", alt="slider")
+		
+		// лэйблы на слайдере #1	
+		nav.section-labels
+			a(href="#").banner-label
+				.banner-label__icon
+					+bannerLabel1
+				.banner-label__text Взрослое отделение
+		
+			a(href="#").banner-label
+				.banner-label__icon
+					+bannerLabel1
+				.banner-label__text Детское отделение
+		
+			a(href="#").banner-label
+				.banner-label__icon
+					+bannerLabel1
+				.banner-label__text Центр планирования семьи
+		
+			a(href="#").banner-label
+				.banner-label__icon
+					+bannerLabel1
+				.banner-label__text Центр абулаторной хирургии
+

@@ -1,0 +1,73 @@
+section.programms
+	.container
+		h2.section-title Комплексные экспресс программы
+		ul#pills-tab.nav.nav-pills(role="tablist")
+			li.nav-item
+				a#pills-category1-tab.nav-link.active(data-toggle="pill" href="#pills-category1" role="tab" aria-controls="pills-category1" aria-selected="true") Семейные
+			li.nav-item
+				a#pills-category2-tab.nav-link(data-toggle="pill" href="#pills-category2" role="tab" aria-controls="pills-category2" aria-selected="false") Семейные
+			li.nav-item
+				a#pills-category3-tab.nav-link(data-toggle="pill" href="#pills-category3" role="tab" aria-controls="pills-category3" aria-selected="false") Семейные
+			li.nav-item
+				a#pills-category4-tab.nav-link(data-toggle="pill" href="#pills-category4" role="tab" aria-controls="pills-category4" aria-selected="false") Семейные
+			li.nav-item
+				a#pills-category5-tab.nav-link(data-toggle="pill" href="#pills-category5" role="tab" aria-controls="pills-category5" aria-selected="false") Семейные
+		#pills-tabContent.tab-content
+			#pills-category1.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="pills-category1-tab")
+				+programmContent
+			#pills-category2.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category2-tab")
+				+programmContent
+			#pills-category3.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category3-tab")
+				+programmContent
+			#pills-category4.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category4-tab")
+				+programmContent
+			#pills-category5.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category5-tab")
+				+programmContent
+
+section.programms-slider
+	.container
+		.section-head
+			h2.section-title Комплексные экспресс программы
+			a(href="#").text-link Смотреть все программы
+		
+		.programms-slider-wrapper
+			.programms-slider__column
+				.banner-label.banner-label2
+					p Программы для&nbsp;всей семьи
+				.banner-label.banner-label2
+					p Программы для&nbsp;всей семьи
+				.banner-label.banner-label2
+					p Программы для&nbsp;всей семьи
+				.banner-label.banner-label2
+					p Программы для&nbsp;всей семьи
+				.banner-label.banner-label2
+					p Программы для&nbsp;всей семьи
+					
+			.programms-carousel.owl-carousel
+				.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+					.programm-card__text
+						.label
+							p  Программа
+						h4 Моя семья
+						p Годовая программа обслуживания Вашей семьи
+						.price
+							p от 30 000 р
+				.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+					.programm-card__text
+						.label
+							p  Программа
+						h4 Моя семья
+						p Годовая программа обслуживания Вашей семьи
+						.price
+							p от 30 000 р
+				.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+					.programm-card__text
+						.label
+							p  Программа
+						h4 Моя семья
+						p Годовая программа обслуживания Вашей семьи
+						.price
+							p от 30 000 р
+			
+			#counter
+		

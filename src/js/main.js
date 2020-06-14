@@ -16,20 +16,70 @@ $(document).ready(function () {
     })
 
     /*SLIDER - BANNER */
-    let banner1 = document.querySelector('.banner1');
-    if (banner1) {
-        $('.banner-wrapper').owlCarousel({
+
+    $('.banner-wrapper').owlCarousel({
+        items: 1,
+        // autoplay: true,
+        loop: true,
+        dots: true,
+        autoplaySpeed: 1200,
+
+        autoplayHoverPause: true,
+        smartSpeed: 1200,
+        navSpeed: 1200
+    });
+
+    $('.banner3-slider').owlCarousel({
+        items: 1
+    });
+    $('.banner-wrapper2').owlCarousel({
+        items: 1
+    });
+    $(function () {
+        var owl = $('.programms-carousel');
+        owl.owlCarousel({
+            autoplay: 2000,
             items: 1,
-            // autoplay: true,
-            loop: true,
-            dots: true,
-            autoplaySpeed: 1200,
-            URLhashListener: true,
-            autoplayHoverPause: true,
-            smartSpeed: 1200,
-            navSpeed: 1200
-        })
-    }
+            onInitialized: counter, //When the plugin has initialized.
+            onTranslated: counter //When the translation of the stage has finished.
+        });
+
+        function counter(event) {
+            var element = event.target; // DOM element, in this example .owl-carousel
+            var items = event.item.count; // Number of items
+            var item = event.item.index + 1; // Position of the current item
+            $('#counter').html(item + "/ " + items)
+        }
+    });
+
+    // partner-logo
+    $('.partners-slider').owlCarousel({
+        items: 1,
+        loop: true,
+        smartSpeed: 900,
+        center: true,
+        autoplay: true,
+
+        autoplaySpeed: 800,
+        responsive: {
+            320: {
+                items: 1
+            },
+            560: {
+                items: 3
+            },
+            768: {
+                items: 4
+            },
+            992: {
+                items: 5
+            },
+            1200: {
+                items: 6
+            }
+        }
+    })
+
     // VIDEO-SLIDER
     $('.video-blog').owlCarousel({
         items: 1,
@@ -57,5 +107,20 @@ $(document).ready(function () {
         center: true,
         nav: true,
         navSpeed: 1200
+    });
+    $('.review-slider2').owlCarousel({
+        items: 2,
+
+        nav: true,
+        navSpeed: 1200,
+        loop: true,
+        responsive: {
+            320: {
+                items: 1
+            },
+            560: {
+                items: 2
+            }
+        }
     })
 })

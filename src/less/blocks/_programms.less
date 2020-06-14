@@ -1,0 +1,159 @@
+.programms {
+
+	.nav-link {
+		background-color: #f3f3f3;
+
+		color: @text;
+		border-radius: 20px;
+		margin-right: 20px;
+	}
+
+	.nav-link.active {
+		.btn-gradient;
+		color: @white;
+	}
+
+	.nav-pills {
+		margin-bottom: 40px;
+	}
+}
+
+.programm-card {
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	height: 325px;
+	box-shadow: 0 0 35px rgba(0, 0, 0, .2);
+	color: @white;
+	position: relative;
+	overflow: hidden;
+	transition: .3s;
+
+	&:hover {
+		box-shadow: 0 0 35px rgba(0, 0, 0, .35);
+	}
+}
+
+.programm-card:before {
+	content: '';
+	width: 94%;
+	height: 85%;
+	border-radius: 63% 134%;
+	background-color: @btn;
+	.btn-gradient;
+	position: absolute;
+	left: -18%;
+	top: 50.5%;
+	z-index: 2;
+}
+
+.programm-card__text {
+	position: absolute;
+	width: 60%;
+	color: @white;
+	left: 20px;
+	bottom: 10px;
+	z-index: 2;
+
+	.label {
+		font-size: 11px;
+		width: fit-content;
+		line-height: 20px;
+		color: @text;
+		padding-left: 15px;
+		padding-right: 15px;
+		height: 20px;
+		border-radius: 10px;
+		background-color: #fff;
+		margin-bottom: 4px;
+	}
+
+	h4 {
+		font-size: 23px;
+		line-height: 1;
+	}
+
+	h4>p {
+		font-size: 14px;
+		margin-bottom: 5px;
+		line-height: 1.1;
+	}
+
+	.price p {
+		font-size: 21px;
+		font-family: 'Lato Light';
+	}
+}
+
+.programms-slider-wrapper {
+	display: flex;
+	position: relative;
+
+	#counter {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		color: red;
+		font-size: 20px;
+		z-index: 5;
+
+	}
+}
+
+.programms-slider__column {
+	position: relative;
+	z-index: 2;
+	right: -5px;
+}
+
+.programms-slider {
+	.section-head {
+		margin-bottom: 50px;
+	}
+}
+
+.programms-carousel {
+	width: calc(~'100% - 265px');
+
+	flex-grow: 2;
+}
+
+.programms-slider .programms-carousel__item {
+	height: 519px;
+
+	padding: 40px 35px;
+	background-size: cover;
+	background-position: 0 0;
+
+	.programm-card__text {
+		position: relative;
+		width: 30%;
+		left: 0;
+		bottom: 0;
+		color: @text;
+
+		.label {
+			color: @white;
+			background-color: @btn;
+			margin-bottom: 10px;
+		}
+
+		h4 {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+
+		h4>p {
+			font-size: 16px;
+		}
+
+		;
+
+		.price p {
+			font-size: 30px;
+		}
+	}
+
+}
