@@ -124,12 +124,23 @@ mixin table(args)
 mixin checkboxGroup(title, ...items)
 	.checkbox-group
 		h3 #{title}
-		each item in items
-			label
-				input(type="checkbox" name="")
-				.fake-checkbox
-				| #{item}
+		.label-block
+			each item in items
+				label
+					input(type="checkbox" name="")
+					.fake-checkbox
+					| #{item}
 
+mixin specialistCard
+	.card-specialist
+		.card-img
+			img(src="img/doctor3.jpg", alt="doctor")
+		.card-text
+			h3 Мария Кравцова
+			.text-14
+				p Гинеколог, Репродуктолог, Врач центра планирования семьи, Гинеколог
+		.card-btn
+			.page-button.page-button2 Записаться к врачу
 mixin timeCard
 	.time-card
 		form(action="")

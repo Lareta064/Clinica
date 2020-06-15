@@ -2,6 +2,7 @@ label {
 	display: flex;
 	font-size: 14px;
 	line-height: 1.6;
+	margin-bottom: 18px;
 
 	input {
 		width: 0.01px;
@@ -9,8 +10,10 @@ label {
 }
 
 .fake-checkbox {
-	width: 20px;
-	height: 20px;
+	min-width: 20px;
+	min-height: 20px;
+	max-width: 20px;
+	max-height: 20px;
 	background: #d0d0d0;
 	position: relative;
 	border-radius: 50%;
@@ -26,7 +29,7 @@ label {
 
 	position: absolute;
 	left: 50%;
-	top: 49%;
+	top: 45%;
 	transform: translate(-50%, -50%) rotate(-45deg);
 
 }

@@ -137,4 +137,10 @@ $(document).ready(function () {
         tabIcon.removeClass("rotate");
     });
 
+    // переставить сайдбар
+    const asideLeft = document.querySelector('.aside-left');
+    if (asideLeft) {
+        const mainBlock = asideLeft.querySelector('.col-lg-9');
+        mainBlock.classList.add('order-lg-2')
+    }
 })

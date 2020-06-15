@@ -1,0 +1,39 @@
+section.specialists.aside-left
+	.container
+		+breadcrmb([{link:'index.html', title: 'Главная'}, {link:'#', title: 'Специалисты'}])
+		h2.section-title Специалисты
+		.page-content
+			.row
+				.col-lg-9
+					.page-content__column
+						.search-group
+							.search-block
+								input(type="text" name="" placeholder="Имя врача или название специалиста")
+								button
+									i.fas.fa-search
+						.specialist-cards_wpapper
+							.row
+								.col-md-4
+									+specialistCard
+								.col-md-4
+									+specialistCard
+								.col-md-4
+									+specialistCard
+								.col-md-4
+									+specialistCard
+								.col-md-4
+									+specialistCard
+								.col-md-4
+									+specialistCard
+								.col-md-4
+									+specialistCard
+								.col-md-4
+									+specialistCard
+								.col-md-4
+									+specialistCard
+				.col-lg-3
+					aside.aside-panel
+						.aside-panel_column
+							+checkboxGroup('Взрослое отделение', 'Врач УЗИ диагностики', 'Репродуктолог','Терапевт','Гастроэнтеролог','Гинеколог','Гинеколог-эндокринолог','Гирудотерапевт','Дерматовенеролог','Диетолог','Кардиолог','Колопроктолог','Косметолог','Логопед','Маммолог','Мануальный терапевт','Врач УЗИ диагностики', 'Репродуктолог','Терапевт','Гастроэнтеролог')
+						.aside-panel_column
+							+checkboxGroup('Детское отделение', 'Врач УЗИ диагностики', 'Репродуктолог','Терапевт','Гастроэнтеролог','Гинеколог','Гинеколог-эндокринолог','Гирудотерапевт','Дерматовенеролог','Диетолог','Кардиолог','Колопроктолог','Косметолог','Логопед','Маммолог','Мануальный терапевт','Врач УЗИ диагностики', 'Репродуктолог','Терапевт','Гастроэнтеролог')
