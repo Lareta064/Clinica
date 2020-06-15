@@ -159,8 +159,10 @@ mixin timeTableHead
 mixin timeTableRow
 	.timetable-row
 		.timetable-title
-			p tutututuut
-			p gkgkgkgkgk
+			.text-bold
+				p Мальцева Мария Евгеньевна
+			.text-14
+				p Врач УЗ диагностики
 		.timetable-column
 			.timetable-cell
 				+timeCard
@@ -182,6 +184,20 @@ mixin timeTable
 		+timeTableRow
 		+timeTableRow
 
+//-accordeon-row
+mixin accordeonCard(cards)
+	each card in cards
+		.card
+			.card-header(id=""+ card.id)
+				
+				h5.mb-0
+					button.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target=" #"+card.colId aria-expanded="false" aria-controls=""+card.colId)
+						| #{card.title}
+						span.arrow
+							i.fas.fa-angle-down
+			.collapsable.collapse(id=""+card.colId aria-labelledby=""+ card.id data-parent="#timetable")
+				.card-body
+					+timeTable
 //SVG
 mixin bannerLabel1
 	span

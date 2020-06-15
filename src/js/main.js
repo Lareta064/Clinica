@@ -126,5 +126,15 @@ $(document).ready(function () {
                 items: 2
             }
         }
-    })
+    });
+    //Для всех сворачиваемых элементов (не кнопок, а сворачиваемых блоков)
+    $('.collapsable').on('show.bs.collapse', function () {
+        let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+        tabIcon.addClass("rotate");
+    });
+    $('.collapsable').on('hide.bs.collapse', function () {
+        let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+        tabIcon.removeClass("rotate");
+    });
+
 })

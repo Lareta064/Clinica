@@ -1,0 +1,65 @@
+section.timetable-page
+	.container
+		+breadcrmb([{link:'index.html', title: 'Главная'}, {link:'page-timetable.html', title: 'Расписание'}])
+		h2.section-title Расписание
+		.search-group
+			.row
+				.col-md-4.col-xl-3.order-md-2
+					.date-period
+						button.prev-period
+						p 03-10 июня
+						button.next-period
+				.col-md-8.col-xl-9.order-md-1
+					.search-block
+						input(type="text" name="" placeholder="Имя врача или название специалиста")
+						button
+							i.fas.fa-search
+					
+		#timetable.timetable-accordion
+			+accordeonCard([
+				{id:'heading1', colId:'collapse1', title: 'Аллергология'}, 
+				{id:'heading2', colId:'collapse2', title: 'Андрология'},
+				{id:'heading3', colId:'collapse3', title: 'Гастроэнтерология'},
+				{id:'heading4', colId:'collapse4', title: 'Гинекология'},
+				{id:'heading5', colId:'collapse5', title: 'Дерматология'},
+				{id:'heading6', colId:'collapse6', title: 'Диагностика'},
+				{id:'heading7', colId:'collapse7', title: 'Диетология'},
+				{id:'heading8', colId:'collapse8', title: 'Кардиология'},
+				{id:'heading9', colId:'collapse9', title: 'Колопроктология'},
+				{id:'heading10', colId:'collapse10', title: 'Косметология'},
+				])
+			//- .card
+			//- 	#headingOne.card-header
+			//- 		h5.mb-0
+			//- 			button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+			//- 				| Аллергология
+			//- 				span.arrow.rotate
+			//- 					i.fas.fa-angle-down
+			//- 	#collapseOne.collapsable.collapse.show(aria-labelledby="headingOne" data-parent="#timetable")
+			//- 		.card-body
+			//- 			+timeTable
+						
+			//- .card
+			//- 	#headingTwo.card-header
+					
+			//- 		h5.mb-0
+			//- 			button.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+			//- 				| Андрология
+			//- 				span.arrow
+			//- 					i.fas.fa-angle-down
+			//- 	#collapseTwo.collapsable.collapse(aria-labelledby="headingTwo" data-parent="#timetable")
+			//- 		.card-body
+			//- 			+timeTable
+						
+			//- .card
+
+			//- 	#headingThree.card-header
+					
+			//- 		h5.mb-0
+			//- 			button.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+			//- 				| Гастроэнтерология
+			//- 				span.arrow
+			//- 					i.fas.fa-angle-down
+			//- 	#collapseThree.collapsable.collapse(aria-labelledby="headingThree" data-parent="#timetable")
+			//- 		.card-body
+			//- 			+timeTable

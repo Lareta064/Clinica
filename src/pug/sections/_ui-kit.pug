@@ -72,24 +72,37 @@
 				h5.mb-0
 					button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
 						| Аллергология
-			#collapseOne.collapse.show(aria-labelledby="headingOne" data-parent="#timetable")
+						span.arrow.rotate
+							i.fas.fa-angle-down
+			#collapseOne.collapsable.collapse.show(aria-labelledby="headingOne" data-parent="#timetable")
 				.card-body
 					+timeTable
 					
 		.card
 			#headingTwo.card-header
+				
 				h5.mb-0
 					button.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
-						| Collapsible Group Item #2
-			#collapseTwo.collapse(aria-labelledby="headingTwo" data-parent="#timetable")
+						| Андрология
+						span.arrow
+							i.fas.fa-angle-down
+			#collapseTwo.collapsable.collapse(aria-labelledby="headingTwo" data-parent="#timetable")
 				.card-body
 					+timeTable
 					
 		.card
 			#headingThree.card-header
+				
 				h5.mb-0
 					button.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
-						| Collapsible Group Item #3
-			#collapseThree.collapse(aria-labelledby="headingThree" data-parent="#timetable")
+						| Гастроэнтерология
+						span.arrow
+							i.fas.fa-angle-down
+			#collapseThree.collapsable.collapse(aria-labelledby="headingThree" data-parent="#timetable")
 				.card-body
 					+timeTable
+.container(style="margin-top:30px; margin-bottom: 50px")
+	.date-period
+		button.prev-period
+		p 03-10 июня
+		button.next-period

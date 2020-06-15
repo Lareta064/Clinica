@@ -37,6 +37,32 @@
 	}
 }
 
+.timetable {
+	overflow: auto;
+}
+
+::-webkit-scrollbar {
+	/* 1 - скроллбар */
+	width: 6px;
+	height: 6px;
+	background-color: #FFFFFF;
+}
+
+::-webkit-scrollbar-track {
+	/* 3 - трек */
+	background-color: #dedede;
+}
+
+::-webkit-scrollbar-track-piece {
+	/* 4 - видимая часть трека */
+}
+
+::-webkit-scrollbar-thumb {
+	/* 5 - ползунок */
+	border-radius: 2px;
+	background-color: @btn;
+}
+
 .timetable-row {
 	display: flex;
 	justify-content: space-between;
@@ -46,10 +72,15 @@
 	border-bottom: 0px;
 	padding-left: 20px;
 	padding-right: 20px;
+	width: 1110px;
 
 
 	.timetable-title {
 		width: 265px;
+
+		.text-14 {
+			color: @buttonActive;
+		}
 	}
 
 	.timetable-column {
@@ -93,5 +124,39 @@
 		border-left: 0px;
 		border-right: 0px;
 
+		padding: 0;
+		height: 60px;
+
+		.btn-link {
+			color: #535353;
+			font-size: 18px;
+			text-decoration: none !important;
+		}
+
+		button {
+			display: block;
+			width: 100%;
+			height: 60px;
+			line-height: 60px;
+			padding: 0;
+			text-align: left;
+			padding-left: 20px;
+			position: relative;
+		}
+
+		.arrow {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: @btn;
+			font-size: 18px;
+			.tr;
+
+			&.rotate {
+				transform: translateY(-50%) rotate(180deg);
+			}
+
+		}
 	}
 }
