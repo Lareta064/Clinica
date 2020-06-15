@@ -166,3 +166,58 @@
 		bottom: -10px;
 	}
 }
+
+.card-specialist {
+	max-width: 265px;
+	background-color: #fff;
+	padding: 25px 25px 30px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+
+	.card-img {
+		height: 220px;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		margin-bottom: 20px;
+		align-items: flex-end;
+
+		img {
+			object-fit: contain;
+			object-position: top;
+		}
+	}
+
+	.card-text {
+		text-align: center;
+
+		h3 {
+			font-size: 24px;
+			font-family: 'Lato Light';
+			margin-bottom: 5px;
+
+			line-height: 1.2;
+		}
+
+		p {
+			color: @buttonActive;
+			line-height: 1.2;
+		}
+
+		margin-bottom: 15px;
+		min-height: 92px;
+		max-height: 92px;
+		overflow: hidden;
+	}
+
+	.page-button2 {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 15px;
+		text-align: center;
+	}
+
+	.page-button2:before {
+		display: none;
+	}
+}

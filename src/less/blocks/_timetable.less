@@ -1,0 +1,97 @@
+.time-card {
+	width: 100px;
+	height: 100px;
+
+	font-size: 13px;
+
+	background-color: #f3f3f3;
+
+	form {
+		width: 100px;
+		height: 100px;
+		padding: 6px;
+		color: @white;
+		.btn-gradient;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	input[type="submit"] {
+		background-color: transparent;
+		border-radius: 15px;
+		width: 100%;
+		border: 1px solid @white;
+		height: 22px;
+		color: @white;
+		margin-top: 7px;
+		cursor: pointer;
+		transition: .3s;
+
+		&:hover {
+			box-shadow: 0 0 10px rgba(255, 255, 255, .5)
+		}
+
+	}
+}
+
+.timetable-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 118px;
+	border: 1px solid #d4d4d4;
+	border-bottom: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+
+	.timetable-title {
+		width: 265px;
+	}
+
+	.timetable-column {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+
+	}
+
+	.timetable-cell {
+		width: 100px;
+	}
+}
+
+.timetable-row--head {
+	height: 50px;
+	border: 0px;
+
+	p {
+		text-align: center;
+		.text-14;
+	}
+}
+
+.timetable-accordion {
+	.card {
+		border-radius: 0;
+		border-left: 0px;
+		border-right: 0px;
+	}
+
+	.card-body {
+		padding: 0px;
+
+	}
+
+	.card-header {
+		border-radius: 0;
+		border-bottom: 0px;
+		background-color: #fff;
+		border-left: 0px;
+		border-right: 0px;
+
+	}
+}

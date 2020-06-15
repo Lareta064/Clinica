@@ -103,6 +103,84 @@ mixin programmContent
 					p Годовая программа обслуживания Вашей семьи
 					.price
 						p от 30 000 р
+mixin breadcrmb(args)
+	.breadcrumb
+		each item in args
+			a(href=" "+ item.link).breadcrumb-item #{item.title}
+mixin table(args)
+	.table-block
+		.table-row.table-row--head
+			.table-cell
+				p #{args.head1}
+			.table-cell
+				p #{args.head2}
+		each item in args.el
+			.table-row
+				.table-cell
+					p #{item.text1}
+				.table-cell
+					p #{item.text2}
+
+mixin checkboxGroup(title, ...items)
+	.checkbox-group
+		h3 #{title}
+		each item in items
+			label
+				input(type="checkbox" name="")
+				.fake-checkbox
+				| #{item}
+
+mixin timeCard
+	.time-card
+		form(action="")
+			input(type="hidden" name="" value="14-20")
+			p 14:00 - 20:00
+			input(type="submit" value="Записаться")
+mixin timeCardEmpty
+	.time-card
+mixin timeTableHead
+	.timetable-row.timetable-row--head
+		.timetable-title
+		.timetable-column
+			.timetable-cell
+				p ср, 03.06
+			.timetable-cell
+				p ср, 03.06
+			.timetable-cell
+				p ср, 03.06
+			.timetable-cell
+				p ср, 03.06
+			.timetable-cell
+				p ср, 03.06
+			.timetable-cell
+				p ср, 03.06
+			.timetable-cell
+				p ср, 03.06
+mixin timeTableRow
+	.timetable-row
+		.timetable-title
+			p tutututuut
+			p gkgkgkgkgk
+		.timetable-column
+			.timetable-cell
+				+timeCard
+			.timetable-cell
+				+timeCard
+			.timetable-cell
+				+timeCard
+			.timetable-cell
+				+timeCard
+			.timetable-cell
+				+timeCardEmpty
+			.timetable-cell
+				+timeCardEmpty
+			.timetable-cell
+				+timeCardEmpty
+mixin timeTable
+	.timetable
+		+timeTableHead
+		+timeTableRow
+		+timeTableRow
 
 //SVG
 mixin bannerLabel1

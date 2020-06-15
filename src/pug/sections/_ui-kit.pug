@@ -20,3 +20,76 @@
 		.card-text
 			h3 Мария Кравцова
 			p Главврач
+
+.container(style="margin-top:30px;")
+	.breadcrumb
+		a(href="#").breadcrumb-item Главная
+		a(href="#").breadcrumb-item Главная
+.container(style="margin-top:30px;")
+	.info-element
+		.icon-box
+			i.fas.fa-envelope
+		.text-box
+			p text
+			p text
+.container(style="margin-top:30px;")
+	
+	+table({head1: 'Стоимость договора, р', head2: 'Скидка', el:[{text1:'От 30 000 до 45 000 на год', text2:'5%'}, {text1:'От 30 000 до 45 000 на год', text2:'5%'}]})
+
+.container(style="margin-top:30px;")
+	+checkboxGroup('Взрослое отделение', 'Врач УЗИ диагностики', 'Репродуктолог')
+
+.container(style="margin-top:30px;")
+	.search-block
+		input(type="text" name="" placeholder="Имя врача или название специалиста")
+		button
+			i.fas.fa-search
+
+.container(style="margin-top:30px;")
+	.card-specialist
+		.card-img
+			img(src="img/doctor3.jpg", alt="doctor")
+		.card-text
+			h3 Мария Кравцова
+			.text-14
+				p Гинеколог, Репродуктолог, Врач центра планирования семьи, Гинеколог
+		.card-btn
+			.page-button.page-button2 Записаться к врачу
+
+.container(style="margin-top:30px;")
+	.time-card
+		form(action="")
+			input(type="hidden" name="" value="14-20")
+			p 14:00 - 20:00
+			input(type="submit" value="Записаться")
+
+.container(style="margin-top:30px; margin-bottom: 50px")
+	+timeTable
+.container(style="margin-top:30px; margin-bottom: 50px")
+	#timetable.timetable-accordion
+		.card
+			#headingOne.card-header
+				h5.mb-0
+					button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+						| Аллергология
+			#collapseOne.collapse.show(aria-labelledby="headingOne" data-parent="#timetable")
+				.card-body
+					+timeTable
+					
+		.card
+			#headingTwo.card-header
+				h5.mb-0
+					button.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo")
+						| Collapsible Group Item #2
+			#collapseTwo.collapse(aria-labelledby="headingTwo" data-parent="#timetable")
+				.card-body
+					+timeTable
+					
+		.card
+			#headingThree.card-header
+				h5.mb-0
+					button.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree")
+						| Collapsible Group Item #3
+			#collapseThree.collapse(aria-labelledby="headingThree" data-parent="#timetable")
+				.card-body
+					+timeTable

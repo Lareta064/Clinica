@@ -38,8 +38,18 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Lato Heavy';
+	src: url('../fonts/Lato-Heavy.eot');
+	src: url('../fonts/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Lato-Heavy.woff') format('woff'),
+		url('../fonts/Lato-Heavy.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 //font-family: 'Lato Black'
-//font-family: 'Lato Regular';
+//font-family: 'Lato Regular'; font-family: 'Lato Heavy';
 * {
 	box-sizing: border-box;
 }
@@ -93,6 +103,7 @@ button {
 	background-color: transparent;
 	cursor: pointer;
 	padding: 0;
+	font-family: 'Lato Regular';
 
 	&:focus {
 		outline: none;
@@ -154,4 +165,91 @@ section {
 .text-14 {
 	font-size: 14px;
 	line-height: 20px;
+}
+
+.title-3 {
+	font-size: 20px;
+	font-family: 'Lato Black';
+
+}
+
+.breadcrumb {
+	background-color: transparent;
+	margin-bottom: 33px;
+}
+
+.breadcrumb-item {
+	position: relative;
+	font-size: 13px;
+	margin-right: 25px;
+	color: @text;
+}
+
+.breadcrumb-item::before {
+	content: '';
+	width: 7px;
+	height: 7px;
+	border-top: 1.5px solid @btn;
+	border-right: 1.5px solid @btn;
+	transform: rotate(45deg);
+	position: absolute;
+	right: -15px;
+	top: 5px;
+}
+
+.breadcrumb-item:last-child {
+	color: #9b9b9b;
+	cursor: default;
+	pointer-events: none;
+
+	&:before {
+		display: none;
+	}
+}
+
+.info-element {
+	display: flex;
+	align-items: center;
+
+	.text-box {
+		padding-left: 10px;
+		font-size: 15px;
+	}
+}
+
+.table-row {
+	display: flex;
+	height: 55px;
+	padding-left: 20px;
+	padding-right: 20px;
+	align-items: center;
+	justify-content: space-between;
+
+	p {
+		font-size: 15px;
+	}
+
+	.table-cell:first-child {
+		width: 66%;
+
+		@media(max-width:991px) {
+			width: 80%;
+		}
+	}
+
+	.table-cell:last-child {
+		width: 33%;
+
+		@media(max-width:991px) {
+			width: 18%;
+		}
+	}
+
+	&:nth-child(2n) {
+		background-color: #f4f4f4;
+	}
+
+	&.table-row--head {
+		font-family: 'Lato Black';
+	}
 }
