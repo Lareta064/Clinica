@@ -1,0 +1,107 @@
+.persone-info {
+	box-shadow: 0 0 25px rgba(0, 0, 0, .15);
+	min-height: 470px;
+	width: 100%;
+
+	.persone-info__label {
+		position: absolute;
+		color: @white;
+		.btn-gradient;
+		bottom: 20px;
+		left: 0;
+		padding: 10px 14px;
+
+		h4 {
+			font-size: 20px;
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+
+				font-size: 15px;
+				line-height: 1.3;
+				margin-bottom: 2px;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.persone-info__img {
+	position: relative;
+	padding-top: 20px;
+	min-height: 470px;
+	background-size: cover;
+}
+
+.persone-info__table {
+	padding-top: 30px;
+	padding-bottom: 35px;
+	padding-right: 15px;
+
+
+	.table-row {
+		padding-top: 13px;
+		padding-bottom: 13px;
+		background-color: #fff;
+		border-bottom: 1px solid #d4d4d4;
+		padding-left: 0;
+
+		&.table-row--head {
+			border-bottom: 0px;
+		}
+
+		h3 {
+			font-size: 20px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+
+		.table-cell:last-child {
+			color: @darkGreen;
+			justify-content: flex-end;
+			display: flex;
+		}
+	}
+
+	.table-block {
+		margin-bottom: 10px;
+	}
+
+	.text-link {
+		padding-left: 0;
+		color: @darkGreen;
+	}
+
+	.text-link:after {
+		left: auto;
+		right: -10px;
+
+	}
+
+	.page-button2 {
+		padding-left: 30px;
+		padding-right: 30px;
+		font-size: 15px;
+		white-space: nowrap;
+
+		&:first-child {
+			margin-right: 15px;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	.btn-group {
+		position: absolute;
+		bottom: 20px;
+		right: 30px;
+	}
+}

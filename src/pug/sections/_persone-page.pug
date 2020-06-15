@@ -1,0 +1,29 @@
+section.persone-page
+	.container
+		+breadcrmb([{link:'index.html', title: 'Главная'}, {link:'specialists.html', title: 'Специалисты'}, {link:'#', title: 'Баранова Вера Николаевна'}])
+		h2.section-title Баранова Вера Николаевна
+		
+		.page-content
+			.row
+				.col-lg-9
+					.page-content__column
+						.persone-info
+							.row
+								.col-md-6
+									.persone-info__img(style="background-image: url(img/doctor-photo.png)")
+										.persone-info__label
+											h4 Гинеколог 
+											ul
+												li Гинеколог-эндокринолог
+												li Гинеколог-эндокринолог	
+												li Репродуктолог   
+												li Репродуктолог
+								.col-md-6
+									.persone-info__table
+										+table({head1: 'Услуги врача', head2: '', el:[{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'}, 
+										{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},
+										{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},]})
+										a(href="#").text-link Смотреть все услуги
+										.btn-group
+											.page-button.page-button2 Оставить отзыв	
+											.page-button.page-button2 Записаться к врачу									

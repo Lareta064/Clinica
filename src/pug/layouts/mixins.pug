@@ -111,9 +111,9 @@ mixin table(args)
 	.table-block
 		.table-row.table-row--head
 			.table-cell
-				p #{args.head1}
+				h3 #{args.head1}
 			.table-cell
-				p #{args.head2}
+				h3 #{args.head2}
 		each item in args.el
 			.table-row
 				.table-cell
@@ -136,7 +136,7 @@ mixin specialistCard
 		.card-img
 			img(src="img/doctor3.jpg", alt="doctor")
 		.card-text
-			h3 Мария Кравцова
+			a(href="persone-page.html") Мария Кравцова
 			.text-14
 				p Гинеколог, Репродуктолог, Врач центра планирования семьи, Гинеколог
 		.card-btn

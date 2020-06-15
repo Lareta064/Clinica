@@ -199,6 +199,7 @@ section {
 	color: @text;
 }
 
+.breadcrumb-item+.breadcrumb-item::before,
 .breadcrumb-item::before {
 	content: '';
 	width: 7px;
@@ -209,6 +210,12 @@ section {
 	position: absolute;
 	right: -15px;
 	top: 5px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+	padding-left: 0;
+	padding-right: 0;
+	color: unset;
 }
 
 .breadcrumb-item:last-child {
@@ -233,7 +240,7 @@ section {
 
 .table-row {
 	display: flex;
-	height: 55px;
+	min-height: 55px;
 	padding-left: 20px;
 	padding-right: 20px;
 	align-items: center;
