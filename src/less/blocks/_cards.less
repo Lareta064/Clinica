@@ -217,6 +217,10 @@
 			color: @text;
 			line-height: 1.2;
 
+			&:hover {
+				color: @darkGreen;
+			}
+
 			@media(max-width:1199px) {
 				font-size: 20px;
 			}
@@ -255,17 +259,32 @@
 	align-items: center;
 	padding-top: 13px;
 	padding-bottom: 13px;
-	// background-color: #f3f3f3;
+	transition: .3s;
 	border-bottom: 1px solid #d0d0d0;
-	;
+
+	&:last-child {
+		border-bottom: 0px;
+	}
+
+	&:hover {
+		.small-card__img {
+			box-shadow: 0 0 26px rgba(98, 204, 98, .35);
+
+		}
+
+		border-bottom: 1px solid rgba(98, 204, 98, .65);
+	}
 
 
 	.small-card__img {
 
-		width: 70px;
-		height: 70px;
+		min-width: 70px;
+		min-height: 70px;
+		max-width: 70px;
+		max-height: 70px;
 		border-radius: 50%;
 		overflow: hidden;
+		.tr;
 
 		img {
 			// object-fit: cover;
@@ -273,9 +292,14 @@
 		}
 	}
 
+	.text-box {
+		padding-left: 10px;
+	}
+
 	.text-box p:first-child {
 		font-size: 18px;
 		font-family: 'Lato Bold';
+		color: @text;
 	}
 
 	p:last-child {

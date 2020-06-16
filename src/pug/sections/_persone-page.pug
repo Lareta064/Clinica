@@ -7,7 +7,7 @@ section.persone-page
 			.row
 				.col-lg-9
 					.page-content__column
-						.persone-info
+						.persone-info#about
 							.row
 								.col-md-6
 									.persone-info__img(style="background-image: url(img/doctor-photo.png)")
@@ -27,11 +27,13 @@ section.persone-page
 										.btn-group
 											.page-button.page-button2 Оставить отзыв	
 											.page-button.page-button2 Записаться к врачу								
+						//услуги
 						article.persone-service#service
 							+table({head1: 'Услуги врача', head2: '', el:[{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'}, 
 							{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},
 							{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},]})(class="table-block2")
 
+						//расписание
 						article.persone-timetable#timetable
 							.article-title
 								h3 Расписание
@@ -39,7 +41,8 @@ section.persone-page
 								+timeTableHead2
 								+timetableItems
 								+datePeriod
-						article.text-block.persone-experience
+						//образование и опыт
+						article.text-block.persone-experience#experience
 							.article-title
 								h3 Опыт и образование
 							ul
@@ -54,7 +57,8 @@ section.persone-page
 								li Имеет сертификаты специалиста по направлениям «терапия» и программе «общая врачебная практика (семейная медицина)».
 								li С 2016 г. ведет прием в медицинском центре АКСИС в должности врача-терапевта.
 								li 2017 г. повышение квалификации по программе "Общая врачебная практика"
-						article.persone-sert
+						//серитфикаты
+						article.persone-sert#sert
 							.persone-sert-slider.owl-carousel
 								.persone-sert-item
 									img(src="img/doc.jpg", alt="сертификат")
@@ -72,3 +76,45 @@ section.persone-page
 									img(src="img/doc.jpg", alt="сертификат")
 								.persone-sert-item
 									img(src="img/doc.jpg", alt="сертификат")
+						article.persone-review#review
+							.article-title
+								h3 Отзывы пациентов
+							//отзыв
+							.review-slider__item.review-item--static
+								.review-content
+									.review-head
+										.author-photo
+											img(src="img/rev1.jpg", alt="photo")
+										.autor-name
+											p Ирина
+											p Москва
+									.review-text
+										p Так много добрых слов хочется написать о коллективе клиники. Спасибо огромное Колесник Алексею Петровичу за проведенную операцию, я так много добрых отзывов слышала и читала о нем, что без сомнений доверила свое здоровье и жизнь Вам, Алексей Петрович! Спасибо Антону Олеговичу за его грамотность, профессионализм, внимательность, доброту, это замечательный врач и человек, общение с такими людьми, врачами с большой буквы, вселяет надежду на самый лучший результат!! Алексей Петрович, Антон Олегович, Юлия Ивановна, спасибо всем вам, низкий вам поклон за ваш тяжелый и такой необходимый для нас пациентов труд! Благодарю вас!!!!
+							//отзыв
+							.review-slider__item.review-item--static
+								.review-content
+									.review-head
+										.author-photo
+											img(src="img/rev1.jpg", alt="photo")
+										.autor-name
+											p Ирина
+											p Москва
+									.review-text
+										p Так много добрых слов хочется написать о коллективе клиники. Спасибо огромное Колесник Алексею Петровичу за проведенную операцию, я так много добрых отзывов слышала и читала о нем, что без сомнений доверила свое здоровье и жизнь Вам, Алексей Петрович! Спасибо Антону Олеговичу за его грамотность, профессионализм, внимательность, доброту, это замечательный врач и человек, общение с такими людьми, врачами с большой буквы, вселяет надежду на самый лучший результат!! Алексей Петрович, Антон Олегович, Юлия Ивановна, спасибо всем вам, низкий вам поклон за ваш тяжелый и такой необходимый для нас пациентов труд! Благодарю вас!!!!
+
+				.col-lg-3
+					aside.aside-panel
+						nav.aside-menu
+							a(href="#about") Врач
+							a(href="#service") Услуги
+							a(href="#timetable") Расписание
+							a(href="#experience") Образование и опыт
+							a(href="#sert") Сертификаты
+							a(href="#review") Отзывы
+						.aside-panel_column
+							h3 Другие специалисты
+							+smallCard
+							+smallCard
+							+smallCard
+							+smallCard
+							+smallCard
