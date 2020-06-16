@@ -1,4 +1,189 @@
-section.contacts
+section.contacts-page
 	.container
-
+		+breadcrmb([{link:'index.html', title: 'Главная'}, {link:'#', title: 'Специалисты'}])
 		h2.section-title Контакты
+		.page-content
+			ul#pills-tab.nav.nav-pills(role="tablist")
+				li.nav-item
+					a#pills-category1-tab.nav-link.active(data-toggle="pill" href="#pills-category1" role="tab" aria-controls="pills-category1" aria-selected="true") Филиал -1
+				li.nav-item
+					a#pills-category2-tab.nav-link(data-toggle="pill" href="#pills-category2" role="tab" aria-controls="pills-category2" aria-selected="false") Филиал -2
+				li.nav-item
+					a#pills-category3-tab.nav-link(data-toggle="pill" href="#pills-category3" role="tab" aria-controls="pills-category3" aria-selected="false") Филиал -3
+				
+			#pills-tabContent.tab-content
+				#pills-category1.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="pills-category1-tab")
+					.contacts-map
+						.row
+							.col-md-6.col-lg-4
+								.contacts-wrapper
+									.info-block.info-block--column
+										.info-element.info-element--address
+											.icon-box
+												i.fas.fa-map-marker-alt
+											.text-box
+												p г. Зеленоград,
+												p 11-й микрорайон, корп. 1130
+										.info-element.info-element--phone
+											.icon-box
+												i.fas.fa-phone
+											.text-box
+												p 
+													a(href="tel:+74992140000") +7(499) 214-00-00
+												p 
+													a(href="tel:+74992140000") +7(499) 214-00-00
+										.info-element
+											.icon-box
+												i.far.fa-envelope
+											.text-box
+												p
+													a(href="#") info@mail.ru
+										.info-element
+											.icon-box
+												i.far.fa-clock
+											.text-box
+												p Открыты до 21:00
+										.add-text
+											p Администраторы медицинского центра  ведут запись на прием к врачам с понедельника по пятницу с 8:00 — 20:00, с 9:00 — 18:00 в субботу, и с 9:00 — 18:00 в воскресенье.
+
+							.col-md-6.col-lg-8
+								.map
+									iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6d1eecbc7aca11806c0009ed4d0ca8474816987e7339112b985b3b10ec96332&amp;source=constructor" width="100%" height="100%" frameborder="0")
+					.contacts-descrip
+						.row
+							.col-md-6
+								.text-block.text-block--border
+									h3.title-3 Как добраться своим ходом
+									.text-block__part
+										h5.title-5 От станции «Крюково»
+										p  На автобусе №4 до остановки "Улица Болдов ручей". На автобусах №1, 10, 12 до остановки "12-й микрорайон. Затем перейти на другую сторону по подземному переходу и идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+									.text-block__part
+										h5.title-5 Со стороны Ленинградского шоссе
+										p До остановки "12-й микрорайон". Затем идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+							.col-md-6
+								.text-block.pl-10
+									h3.title-3 Как добраться своим ходом
+									.text-block__part
+										h5.title-5 От станции «Крюково»
+										p  На автобусе №4 до остановки "Улица Болдов ручей". На автобусах №1, 10, 12 до остановки "12-й микрорайон. Затем перейти на другую сторону по подземному переходу и идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+									.text-block__part
+										h5.title-5 Со стороны Ленинградского шоссе
+										p При движении по Панфиловскому проспекту в сторону станции "Крюково" поверните направо на улицу Болдов ручей. Далее двигайтесь по прямой 1 км. Медицинский центр будет справа от Вас.
+
+				#pills-category2.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category2-tab")
+					.contacts-map
+						.row
+							.col-md-6.col-lg-4
+								.contacts-wrapper
+									.info-block.info-block--column
+										.info-element.info-element--address
+											.icon-box
+												i.fas.fa-map-marker-alt
+											.text-box
+												p г. Зеленоград,
+												p 11-й микрорайон, корп. 1130
+										.info-element.info-element--phone
+											.icon-box
+												i.fas.fa-phone
+											.text-box
+												p 
+													a(href="tel:+74992140000") +7(499) 214-00-00
+												p 
+													a(href="tel:+74992140000") +7(499) 214-00-00
+										.info-element
+											.icon-box
+												i.far.fa-envelope
+											.text-box
+												p
+													a(href="#") info@mail.ru
+										.info-element
+											.icon-box
+												i.far.fa-clock
+											.text-box
+												p Открыты до 21:00
+										.add-text
+											p Администраторы медицинского центра  ведут запись на прием к врачам с понедельника по пятницу с 8:00 — 20:00, с 9:00 — 18:00 в субботу, и с 9:00 — 18:00 в воскресенье.
+
+							.col-md-6.col-lg-8
+								.map
+									iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6d1eecbc7aca11806c0009ed4d0ca8474816987e7339112b985b3b10ec96332&amp;source=constructor" width="100%" height="100%" frameborder="0")
+					.contacts-descrip
+						.row
+							.col-md-6
+								.text-block.text-block--border
+									h3.title-3 Как добраться своим ходом
+									.text-block__part
+										h5.title-5 От станции «Крюково»
+										p  На автобусе №4 до остановки "Улица Болдов ручей". На автобусах №1, 10, 12 до остановки "12-й микрорайон. Затем перейти на другую сторону по подземному переходу и идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+									.text-block__part
+										h5.title-5 Со стороны Ленинградского шоссе
+										p До остановки "12-й микрорайон". Затем идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+							.col-md-6
+								.text-block.pl-10
+									h3.title-3 Как добраться своим ходом
+									.text-block__part
+										h5.title-5 От станции «Крюково»
+										p  На автобусе №4 до остановки "Улица Болдов ручей". На автобусах №1, 10, 12 до остановки "12-й микрорайон. Затем перейти на другую сторону по подземному переходу и идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+									.text-block__part
+										h5.title-5 Со стороны Ленинградского шоссе
+										p При движении по Панфиловскому проспекту в сторону станции "Крюково" поверните направо на улицу Болдов ручей. Далее двигайтесь по прямой 1 км. Медицинский центр будет справа от Вас.
+
+				#pills-category3.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category3-tab")
+					.contacts-map
+						.row
+							.col-md-6.col-lg-4
+								.contacts-wrapper
+									.info-block.info-block--column
+										.info-element.info-element--address
+											.icon-box
+												i.fas.fa-map-marker-alt
+											.text-box
+												p г. Зеленоград,
+												p 11-й микрорайон, корп. 1130
+										.info-element.info-element--phone
+											.icon-box
+												i.fas.fa-phone
+											.text-box
+												p 
+													a(href="tel:+74992140000") +7(499) 214-00-00
+												p 
+													a(href="tel:+74992140000") +7(499) 214-00-00
+										.info-element
+											.icon-box
+												i.far.fa-envelope
+											.text-box
+												p
+													a(href="#") info@mail.ru
+										.info-element
+											.icon-box
+												i.far.fa-clock
+											.text-box
+												p Открыты до 21:00
+										.add-text
+											p Администраторы медицинского центра  ведут запись на прием к врачам с понедельника по пятницу с 8:00 — 20:00, с 9:00 — 18:00 в субботу, и с 9:00 — 18:00 в воскресенье.
+
+							.col-md-6.col-lg-8
+								.map
+									iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6d1eecbc7aca11806c0009ed4d0ca8474816987e7339112b985b3b10ec96332&amp;source=constructor" width="100%" height="100%" frameborder="0")
+					.contacts-descrip
+						.row
+							.col-md-6
+								.text-block.text-block--border
+									h3.title-3 Как добраться своим ходом
+									.text-block__part
+										h5.title-5 От станции «Крюково»
+										p  На автобусе №4 до остановки "Улица Болдов ручей". На автобусах №1, 10, 12 до остановки "12-й микрорайон. Затем перейти на другую сторону по подземному переходу и идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+									.text-block__part
+										h5.title-5 Со стороны Ленинградского шоссе
+										p До остановки "12-й микрорайон". Затем идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+							.col-md-6
+								.text-block.pl-10
+									h3.title-3 Как добраться своим ходом
+									.text-block__part
+										h5.title-5 От станции «Крюково»
+										p  На автобусе №4 до остановки "Улица Болдов ручей". На автобусах №1, 10, 12 до остановки "12-й микрорайон. Затем перейти на другую сторону по подземному переходу и идти вглубь района по левую сторону от ТЦ "Ольга" (600 метров).
+									.text-block__part
+										h5.title-5 Со стороны Ленинградского шоссе
+										p При движении по Панфиловскому проспекту в сторону станции "Крюково" поверните направо на улицу Болдов ручей. Далее двигайтесь по прямой 1 км. Медицинский центр будет справа от Вас.
+
+				

@@ -1,0 +1,85 @@
+.contacts-page {
+	padding-top: 0;
+	padding-bottom: 100px;
+}
+
+.contacts-page .nav-link {
+
+
+	@media(min-width: 992px) {
+		height: 50px;
+		min-width: 200px;
+		line-height: 35px;
+		border-radius: 50px !important;
+	}
+}
+
+.contacts-page .map {
+	height: 100%;
+	box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+	filter: hue-rotate(70deg);
+
+	@media(max-width:767px) {
+		height: 250px;
+	}
+
+}
+
+.contacts-wrapper {
+	background-color: #eeeeee;
+	padding: 25px 10px 30px 20px;
+
+	.info-element:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.info-element--address {
+		margin-bottom: 30px;
+	}
+
+	.info-element--phone {
+		margin-bottom: 20px;
+	}
+}
+
+.info-block--column {
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.contacts-map {
+	margin-bottom: 45px;
+}
+
+.contacts-descrip .text-block p {
+	font-size: 15px;
+	line-height: 26px;
+}
+
+.contacts-descrip .text-block--border {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: -15px;
+		width: 1px;
+		background-color: rgb(238, 238, 238);
+	}
+
+	@media(max-width:767px) {
+		margin-bottom: 40px;
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.contacts-descrip .text-block h3,
+.text-block__part:not(:last-child) {
+	margin-bottom: 25px;
+}
