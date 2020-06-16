@@ -209,11 +209,12 @@
 	.card-text {
 		text-align: center;
 
-		h3 {
+		a {
 			font-size: 24px;
 			font-family: 'Lato Light';
 			margin-bottom: 5px;
-
+			display: block;
+			color: @text;
 			line-height: 1.2;
 
 			@media(max-width:1199px) {
@@ -246,5 +247,39 @@
 
 	.page-button2:before {
 		display: none;
+	}
+}
+
+.small-card {
+	display: flex;
+	align-items: center;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	// background-color: #f3f3f3;
+	border-bottom: 1px solid #d0d0d0;
+	;
+
+
+	.small-card__img {
+
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		img {
+			// object-fit: cover;
+			object-position: top;
+		}
+	}
+
+	.text-box p:first-child {
+		font-size: 18px;
+		font-family: 'Lato Bold';
+	}
+
+	p:last-child {
+		font-size: 14px;
+		color: @darkGreen;
 	}
 }

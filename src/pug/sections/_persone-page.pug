@@ -22,8 +22,19 @@ section.persone-page
 									.persone-info__table
 										+table({head1: 'Услуги врача', head2: '', el:[{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'}, 
 										{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},
-										{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},]})
+										{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},]})(class="table-block2")
 										a(href="#").text-link Смотреть все услуги
 										.btn-group
 											.page-button.page-button2 Оставить отзыв	
-											.page-button.page-button2 Записаться к врачу									
+											.page-button.page-button2 Записаться к врачу								
+						.persone-service#service
+							+table({head1: 'Услуги врача', head2: '', el:[{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'}, 
+							{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},
+							{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},]})(class="table-block2")
+
+						.persone-timetable#timetable
+							h3 Расписание
+							.timetable2
+								+timeTableHead2
+								+timetableItems
+								+datePeriod

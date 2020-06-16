@@ -109,9 +109,15 @@
 		button.next-period
 
 .container(style="margin-top:30px; margin-bottom: 50px")
-	.small-card
-		.small-card__img
-			img(src="", alt="")
-		.text-box
-			p text
-			p text
+	+smallCard
+.container(style="margin-top:30px; margin-bottom: 50px")
+	.timetable2
+		+timeTableHead2
+		.timetable2__items
+			+timeCard
+			+timeCard
+			+timeCard
+			+timeCard
+			+timeCard
+			+timeCard
+			+timeCard
