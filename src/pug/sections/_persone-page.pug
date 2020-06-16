@@ -27,14 +27,48 @@ section.persone-page
 										.btn-group
 											.page-button.page-button2 Оставить отзыв	
 											.page-button.page-button2 Записаться к врачу								
-						.persone-service#service
+						article.persone-service#service
 							+table({head1: 'Услуги врача', head2: '', el:[{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'}, 
 							{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},
 							{text1:'Прием (осмотр, консультация) врача-терапевта, первичный ', text2:'1500р'},]})(class="table-block2")
 
-						.persone-timetable#timetable
-							h3 Расписание
+						article.persone-timetable#timetable
+							.article-title
+								h3 Расписание
 							.timetable2
 								+timeTableHead2
 								+timetableItems
 								+datePeriod
+						article.text-block.persone-experience
+							.article-title
+								h3 Опыт и образование
+							ul
+								li 1984г. окончила Карагандинский государственный медицинский институт по специальности «лечебное дело».
+								li 1984-1985 г.г. походила интернатуру по специальности «Терапия» МСЧ КМК г. Темиртау
+								li 1985-1987 г.г. работала цеховым терапевтом поликлиники МСЧ КМК г. Темиртау.
+								li 1987-1988 г.г. работала врачом-диетологом МСЧ завода им. Дегтярева г. Ковров Владимирской обл.
+								li 1989-1996 г.г. работа в должности зав. приемным отделением ЦРБ г. Ковров
+								li 1996-2010 г.г. - врач-ординатор, зав. терапевтическим отделением железнодорожной больницы г. Ковров
+								li С 2010 г. работа в частных медицинских центрах г. Зеленограда.
+								li В 2012г. прошла профессиональную переподготовку по программе «Общая врачебная практика (семейная медицина)» на базе Первого МГМУ им. Сеченова.
+								li Имеет сертификаты специалиста по направлениям «терапия» и программе «общая врачебная практика (семейная медицина)».
+								li С 2016 г. ведет прием в медицинском центре АКСИС в должности врача-терапевта.
+								li 2017 г. повышение квалификации по программе "Общая врачебная практика"
+						article.persone-sert
+							.persone-sert-slider.owl-carousel
+								.persone-sert-item
+									img(src="img/doc.jpg", alt="сертификат")
+								.persone-sert-item
+									img(src="img/doc.jpg", alt="сертификат")
+								.persone-sert-item
+									img(src="img/doc.jpg", alt="сертификат")
+								.persone-sert-item
+									img(src="img/doc.jpg", alt="сертификат")
+								.persone-sert-item
+									img(src="img/doc.jpg", alt="сертификат")
+								.persone-sert-item
+									img(src="img/doc.jpg", alt="сертификат")
+								.persone-sert-item
+									img(src="img/doc.jpg", alt="сертификат")
+								.persone-sert-item
+									img(src="img/doc.jpg", alt="сертификат")

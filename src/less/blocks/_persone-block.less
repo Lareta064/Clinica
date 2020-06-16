@@ -1,3 +1,9 @@
+.persone-page {
+	article {
+		padding-top: 45px;
+	}
+}
+
 .persone-info {
 	box-shadow: 0 0 25px rgba(0, 0, 0, .15);
 	min-height: 470px;
@@ -44,31 +50,6 @@
 	padding-right: 15px;
 
 
-	// .table-row {
-	// 	padding-top: 13px;
-	// 	padding-bottom: 13px;
-	// 	background-color: #fff;
-	// 	border-bottom: 1px solid #d4d4d4;
-	// 	padding-left: 0;
-
-	// 	&.table-row--head {
-	// 		border-bottom: 0px;
-	// 	}
-
-	// 	h3 {
-	// 		font-size: 20px;
-	// 	}
-
-	// 	p {
-	// 		font-size: 16px;
-	// 	}
-
-	// 	.table-cell:last-child {
-	// 		color: @darkGreen;
-	// 		justify-content: flex-end;
-	// 		display: flex;
-	// 	}
-	// }
 
 	.table-block {
 		margin-bottom: 10px;
@@ -158,9 +139,14 @@
 }
 
 .persone-timetable {
-	padding-top: 45px;
+	// padding-top: 45px;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #d0d0d0;
+
+	.timetable-row--head {
+		height: auto;
+		margin-bottom: 5px;
+	}
 
 	h3 {
 		font-size: 20px;
@@ -169,6 +155,52 @@
 
 	.date-period {
 		margin-top: 30px;
-		border-bottom: 0px;
+		box-shadow: none;
 	}
+}
+
+.persone-sert-slider.owl-carousel {
+	.owl-dots {
+		width: auto;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -40px;
+		z-index: 2;
+		align-items: center;
+
+		.owl-dot {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			margin-right: 10px;
+			line-height: 1;
+			background-color: #bababa;
+
+
+
+			&.active {
+				background-color: @buttonActive;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.owl-nav {
+		bottom: -53px;
+		top: auto;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		justify-content: space-between;
+		z-index: 1;
+		font-size: 50px;
+		display: flex;
+		line-height: 1;
+		width: 140px;
+
+	}
+
 }

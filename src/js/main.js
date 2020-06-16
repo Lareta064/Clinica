@@ -143,4 +143,30 @@ $(document).ready(function () {
         const mainBlock = asideLeft.querySelector('.col-lg-9');
         mainBlock.classList.add('order-lg-2')
     }
+
+    //-сертификаты врача слайдер
+    let sertificates = $('.persone-sert-slider');
+    if (sertificates) {
+        sertificates.owlCarousel({
+            items: 3,
+            nav: true,
+            dots: true,
+            navSpeed: 1000,
+            dotsSpeed: 1000,
+
+            responsive: {
+                320: {
+                    items: 1
+                },
+                560: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                }
+            }
+
+
+        })
+    }
 })
