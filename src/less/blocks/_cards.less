@@ -54,8 +54,8 @@
 	max-width: 285px;
 	padding-top: 2em;
 	padding-bottom: 2em;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: .7em;
+	padding-right: .7em;
 
 	@media(max-width:991px) {
 		min-width: 50%;
@@ -69,6 +69,10 @@
 		margin-bottom: 15px;
 		display: flex;
 		justify-content: center;
+		height: 60px;
+
+		align-items: flex-end;
+
 	}
 
 	.benefit-item__title {
@@ -125,16 +129,6 @@
 	@media(max-width:767px) {
 		padding: 25px;
 	}
-
-	// &:after {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	bottom: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	background-color: rgba(255, 255, 255, .5);
-	// }
 
 	h3 {
 		font-family: 'Lato Black';
@@ -310,4 +304,32 @@
 		font-size: 14px;
 		color: @darkGreen;
 	}
+}
+
+.card4__img {
+	box-shadow: 0 0 26px rgba(0, 0, 0, .15);
+	margin-bottom: 10px;
+}
+
+.card4__text {
+	padding: 20px 15px;
+	.btn-gradient;
+	color: @white;
+
+	p {
+		font-size: 14px;
+		margin-bottom: 4px;
+	}
+
+	h4 {
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+
+	.price p {
+		font-size: 24px;
+		font-family: 'Lato Light';
+		margin-bottom: 0;
+	}
+
 }

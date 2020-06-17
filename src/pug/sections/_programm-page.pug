@@ -1,0 +1,129 @@
+- var listItems = ['Аллерголог-иммунолог (в т.ч. детский)', 'Андролог','Гастроэнтеролог (в т.ч. детский)','Гинеколог','Дерматолог (в т.ч. детский)','Диетолог','Кардиолог (в т.ч. детский)','Колопроктолог ','Логопед']
+- var listItems2 = ['Маммолог', 'Невролог (в т.ч. детский)', 'Ортопед (в т.ч. детский)', 'Оториноларинголог (в т.ч. детский)', 'Офтальмолог (в т.ч. детский)', 'Педиатр', 'Специалист по грудному вскармливанию', 'Стоматолог', 'Терапевт']
+-;
+section.one-programm
+	.container
+		+breadcrmb([{link:'index.html', title: 'Главная'}, {link:'№', title: 'Комплексные программы'}, {link:'#', title: 'Моя семья'}])
+		h2.section-title Моя семья		
+		.row
+			.col-lg-9
+				article.description-block
+					.title-5
+						p Годовая программа обслуживания Вашей семьи. 
+						p В рамках договора Вы и Ваши близкие получают широкий спектр необходимых медицинских услуг со скидкой.
+					
+					.article-title
+						h3 О программе
+					.about-content__text
+						p На базе медцентра «Medicine» функционирует клиническая лаборатория, оснащенная новым диагностическим оборудованием. Вам доступен широкий спектр медицинских анализов.
+
+						p Центр амбулаторной хирургии в «Medicine» - это хирургия полного цикла:
+						ul
+							li Первичный прием и диагностика
+							li Предоперационное обследование и подготовка
+							li Операция с полноценной бригадой специалистов (большая операционная с новым оборудованием экспертного класса)
+							li Дневной стационар (комфортная палата с ванной комнатой и ТВ)
+							li Постоперационное сопровождение.
+							li Центр планирования семьи в «Medicine» также предусматривает полный цикл:
+							li Лечение бесплодия
+							li Предгравидарная подготовка (наблюдение беременности и послеродовое обследование)
+							li Ведение женщин с отягощенным акушерским анамнезом
+							li Исследование проходимости маточных труб
+							li Генетическая лаборатория для беременных.
+							p Также наши опытные врачи-гинекологи заботятся о женском здоровье вне планирования семьи:
+						ul 
+							li Ведение женщин переходного и менопаузального возраста
+							li Гистероскопия и ГСГ (в т.ч. перед ЭКО)
+						p Медицинский центр в Москве «Medicine» специализируется на ранней диагностике, профилактике и лечении широкого спектра заболеваний. Мы объясняем каждое врачебное действие и подробно отвечаем
+					.benefits-block
+						+benefitsItem('heart-green.png', 'Ценим доверие', 'Объясняем диагнозы и схему лечения, пишем разборчиво')
+						+benefitsItem('family-green.png', '5 лет', 'Заботимся о здоровье взрослых и детей')
+						+benefitsItem('doc-green.png', '21 доктор', 'Врачи общей практики и узкие специалисты')
+						+benefitsItem('filial-green.png', '3 филиала', 'Стараемся быть ближе к нашим пациентам')
+				// список услуг			
+				article.service-list
+					.article-title
+						h3 Список услуг программы
+					.service-tabs.service-tabs-2
+						ul#pills-tab.nav.nav-pills(role="tablist")
+							li.nav-item
+								a#pills-category1-tab.nav-link.active(data-toggle="pill" href="#pills-category1" role="tab" aria-controls="pills-category1" aria-selected="true") Консультации специалистов
+							li.nav-item
+								a#pills-category2-tab.nav-link(data-toggle="pill" href="#pills-category2" role="tab" aria-controls="pills-category2" aria-selected="false") Лабораторные исследования
+							li.nav-item
+								a#pills-category3-tab.nav-link(data-toggle="pill" href="#pills-category3" role="tab" aria-controls="pills-category3" aria-selected="false") Амбулаторная хирургия
+							li.nav-item
+								a#pills-category4-tab.nav-link(data-toggle="pill" href="#pills-category4" role="tab" aria-controls="pills-category4" aria-selected="false") Инструментальная диагностика
+							li.nav-item
+								a#pills-category5-tab.nav-link(data-toggle="pill" href="#pills-category5" ) Лечебные манипуляции
+						#pills-tabContent.tab-content
+							#pills-category1.tab-pane.fade.show.active.serv-content(role="tabpanel" aria-labelledby="pills-category1-tab")
+								.serv-list
+									+service-col2(listItems)
+									+service-col2(listItems2)
+									
+							#pills-category2.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category2-tab")
+								.serv-list
+									+service-col2(listItems)
+									+service-col2(listItems2)
+									
+							#pills-category3.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category3-tab")
+								.serv-list
+									+service-col2(listItems)
+									+service-col2(listItems2)
+								
+							#pills-category4.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category4-tab")
+								.serv-list
+									+service-col2(listItems)
+									+service-col2(listItems2)
+									
+							#pills-category5.tab-pane.fade(role="tabpanel" aria-labelledby="pills-category5-tab")
+								.serv-list
+									+service-col2(listItems)
+									+service-col2(listItems2)
+
+				article.sale-value
+					.article-title
+						h3 Размеры скидок по годовой программе «Моя семья»
+					+table({head1: 'Стоимость договора, р', head2: 'Скидка', el:[{text1:'От 30 000 до 45 000 на год', text2:'5%'}, {text1:'От 30 000 до 45 000 на год', text2:'5%'}, {text1:'От 60 001 до 80 000 на год', text2:'12%'}, {text1:'От 80 001', text2:'15%, а также 5% на все операции'}]})
+
+				article.feedback-btn
+					.text-12
+						p * Обращаем Ваше внимание, что сайт не является публичной офертой. Вся информация, представленная на сайте о наших ценах и услугах, носит ознакомительный характер. Для уточнения актуальной информации Вы можете позвонить по телефону +7 (000) 00-00-00.
+					.flex-center
+						.page-button.page-button--color Записаться на консультацию
+					
+			.col-lg-3
+				aside.aside-panel
+					nav.aside-menu
+						a(href="#about") Врач
+						a(href="#service") Услуги
+						a(href="#timetable") Расписание
+						a(href="#experience") Образование и опыт
+						a(href="#sert") Сертификаты
+						a(href="#review") Отзывы
+					.aside-panel_column.aside-panel_transparent
+						h3 Другие программы
+						.cards-block
+							//-карточка программы
+							.card4
+								.card4__img
+									img(src="img/pr1.jpg", alt="img")
+								.card4__text
+									p Комплексная программа
+									h4 Предоперационный пакет
+									.price
+										p 5 900 р
+							//-карточка программы
+							.card4
+								.card4__img
+									img(src="img/pr2.jpg", alt="img")
+								.card4__text
+									p Комплексная программа
+									h4 Здоровое сердце
+									.price
+										p 6 900 р
+
+
+
+

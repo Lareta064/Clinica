@@ -59,6 +59,10 @@ mixin service-col(items)
 	.serv-list-col
 		each item in items
 			a(href="#").text-link #{item}
+mixin service-col2(items)
+	.serv-list-col
+		each item in items
+			a(href="#").text-link.text-link2 #{item}
 mixin newCard(title)
 	.news-cards__item.card-item
 		h4 #{title}
@@ -110,9 +114,9 @@ mixin breadcrmb(args)
 mixin table(args)
 	.table-block&attributes(attributes)
 		.table-row.table-row--head
-			.table-cell
+			.table-cell.title-5
 				h3 #{args.head1}
-			.table-cell
+			.table-cell.title-5
 				h3 #{args.head2}
 		each item in args.el
 			.table-row
