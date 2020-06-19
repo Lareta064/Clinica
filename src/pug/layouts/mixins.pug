@@ -58,7 +58,7 @@ mixin benefitsItem(imgSrc, title,desk)
 mixin service-col(items)
 	.serv-list-col
 		each item in items
-			a(href="#").text-link #{item}
+			a(href="service-page.html").text-link #{item}
 mixin service-col2(items)
 	.serv-list-col
 		each item in items
@@ -107,6 +107,45 @@ mixin programmContent
 					p Годовая программа обслуживания Вашей семьи
 					.price
 						p от 30 000 р
+
+mixin programmContent2
+	.row
+		.col-lg-6
+			a(href="#" style="background-image: url(img/family.jpg)").programm-card
+				.programm-card__text
+					.label
+						p  Программа
+					h4 Моя семья
+					p Годовая программа обслуживания Вашей семьи
+					.price
+						p от 30 000 р
+		.col-lg-6
+			a(href="#" style="background-image: url(img/family.jpg)").programm-card
+				.programm-card__text
+					.label
+						p  Программа
+					h4 Моя семья
+					p Годовая программа обслуживания Вашей семьи
+					.price
+						p от 30 000 р
+		.col-lg-6
+			a(href="#" style="background-image: url(img/family.jpg)").programm-card
+				.programm-card__text
+					.label
+						p  Программа
+					h4 Моя семья
+					p Годовая программа обслуживания Вашей семьи
+					.price
+						p от 30 000 р
+		.col-lg-6
+			a(href="#" style="background-image: url(img/family.jpg)").programm-card
+				.programm-card__text
+					.label
+						p  Программа
+					h4 Моя семья
+					p Годовая программа обслуживания Вашей семьи
+					.price
+						p от 30 000 р
 mixin breadcrmb(args)
 	.breadcrumb
 		each item in args
@@ -118,12 +157,13 @@ mixin table(args)
 				h3 #{args.head1}
 			.table-cell.title-5
 				h3 #{args.head2}
-		each item in args.el
-			.table-row
-				.table-cell
-					p #{item.text1}
-				.table-cell
-					p #{item.text2}
+		.table-body
+			each item in args.el
+				.table-row
+					.table-cell
+						p #{item.text1}
+					.table-cell
+						p #{item.text2}
 
 mixin checkboxGroup(title, ...items)
 	.checkbox-group
