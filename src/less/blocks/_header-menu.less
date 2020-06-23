@@ -1,9 +1,17 @@
 .header-top {
 	height: 50px;
-	background-color: @btn;
+	background-color: #474747;
 
 	@media(max-width:767px) {
 		padding-top: 5px;
+	}
+}
+
+.header-top.header-top--green {
+	background-color: @btn;
+
+	.contacts-social a {
+		color: #fff;
 	}
 }
 
@@ -94,16 +102,11 @@
 	color: @white;
 	// font-family: @black;
 	display: block;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 16px;
+	padding-right: 16px;
 	height: 100%;
 	line-height: 50px;
 	transition: .5s;
-	margin-right: 26px;
-
-	&:last-child {
-		margin-right: 0;
-	}
 
 	@media(max-width:991px) {
 		height: auto;
@@ -116,6 +119,11 @@
 	&:hover {
 		background-color: @buttonActive;
 		color: @white;
+	}
+
+	&.active {
+		background-color: @buttonActive;
+
 	}
 
 }
@@ -134,7 +142,9 @@
 		position: absolute;
 		top: -25px;
 		right: -10px;
-		width: calc(~'100vw - 55px');
+		// width: calc(~'100vw - 55px');
+		// max-width: 465px;
+
 	}
 
 
@@ -216,34 +226,67 @@
 .header-search.active {
 	z-index: 10;
 
+	// width: calc(~'100vw - 55px');
+	// max-width: 465px;
+
 	.search-input input {
 		padding-left: 15px;
 		padding-right: 15px;
-	}
-}
 
-.chat-button {
-	button {
-		background-color: transparent;
-		border: 0px;
-		display: block;
-		color: @white;
-		width: 260px;
-		height: 50px;
-		background-color: @buttonActive;
-		position: relative;
-		z-index: 11;
-		margin-left: 12px;
-
-		@media(max-width:1199px) {
-			width: 220px;
-			margin-left: 20px;
+		@media(max-width:991px) {
+			padding-left: 2px;
+			padding-right: 0px;
 		}
+
+		@media(max-width:767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	@media(max-width:991px) {
+		width: 100%;
 
 	}
 
 	@media(max-width:767px) {
+		width: calc(~'100vw - 55px');
+		max-width: 465px;
+
+	}
+}
+
+.contacts-social {
+	display: flex;
+	margin-left: 30px;
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		color: @buttonActive;
+		padding: 10px;
+		margin-right: 10px;
+		width: 40px;
+		height: 40px;
+		.tr;
+
+
+		&:hover {
+			background-color: @buttonActive;
+			// border-radius: 50%;
+		}
+
+		@media(max-width:1199px) {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	}
+
+	@media(max-width:767px) {
 		display: none;
+
 	}
 }
 

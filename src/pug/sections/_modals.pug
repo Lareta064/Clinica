@@ -1,0 +1,92 @@
+//----MODAL WINDOW----//
+.container
+	a(href="#!" data-toggle="modal" data-target="#contact-modal1") Модальное окно #1
+	a(href="#!" data-toggle="modal" data-target="#contact-modal2") Модальное окно #2
+
+// MODAL WINDOW #2
+#contact-modal2.contact-modal.modal.fade(tabindex="-1" role="dialog"  aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			button.close(type="button" data-dismiss="modal" aria-label="Close")
+				span(aria-hidden="true")
+					i.far.fa-times-circle
+			
+			.modal-form-title.modal-title--flex
+				.modal-photo
+					img(src="img/doctor3.jpg", alt="photo")
+				.modal-head
+					h3 Запись онлайн
+					p Мария Кравцова
+
+			.modal-body
+				.feedback-form
+					form.contact-form
+						.form-group
+							input(type="text" name="userName" placeholder="ФИО")
+							
+						.form-group
+							input(type="text" name="userPhone"  placeholder="Контактный телефон")
+							
+						.form-group
+							input(type="text" name="userEmail"  placeholder="E-mail")
+						.form-group
+							input(type="text" name="userEmail"  placeholder="E-mail")
+						.form-group
+							input(type="text" name="dateTime"  placeholder="Удобные дата и время")
+						.form-group
+							input(type="text" name="bearthDay"  placeholder="Дата рождения")
+						.form-group
+							textarea(name="message",  rows="3" placeholder="Сообщение")
+						.form-group.agree-text
+							label(class="form-label")
+								input.form-checkbox(class="form-checkbox" type="checkbox" name="agreePolitic")
+								span.custom-checkbox
+								| Я согласен на  #[a(href="#") обработку персональных данных ].
+						.form-group.form-btn
+							button.page-button.page-button--color Отправить
+
+// MODAL WINDOW #1
+#contact-modal1.contact-modal.modal.fade(tabindex="-1" role="dialog"  aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			button.close(type="button" data-dismiss="modal" aria-label="Close")
+				span(aria-hidden="true")
+					i.far.fa-times-circle
+			
+			.modal-form-title.text-center
+				h3 Запись онлайн
+				p Администратор клиники с радостью ответит на ваши вопросы и&nbsp;запишет к нужному специалисту.
+
+			.modal-body
+				.feedback-form
+					form.contact-form
+						.form-group
+							input(type="text" name="userName" placeholder="Ваше имя")
+							
+						.form-group
+							input(type="text" name="userPhone"  placeholder="Контактный телефон")
+							
+						.select-block.form-group
+							i.fas.fa-angle-down.input-arrow
+							input(type="text" name="direction"  value="" placeholder="Выбрать специализацию").filters-form-input
+							.select-block-drop.hide
+								p.select-option(data-value='Аллерголог') Аллерголог
+								p.select-option(data-value='Косметолог') Косметолог
+								p.select-option(data-value='Кардиолог') Кардиолог
+						.select-block.form-group
+							i.fas.fa-angle-down.input-arrow
+							input(type="text" name="doctorName"   placeholder="Специалист").filters-form-input
+							.select-block-drop.hide
+								p.select-option(data-value='Петрова') Петрова Екатерина
+								p.select-option(data-value='Петрова') Петрова Екатерина
+								p.select-option(data-value='Петрова') Петрова Екатерина
+							
+						.form-group
+							input(type="text" name="dateTime"  placeholder="Удобные дата и время")
+						.form-group.agree-text
+							label(class="form-label")
+								input.form-checkbox(class="form-checkbox" type="checkbox" name="agreePolitic")
+								span.custom-checkbox
+								| Я согласен на  #[a(href="#") обработку персональных данных ].
+						.form-group.form-btn
+							button.page-button.page-button--color Отправить

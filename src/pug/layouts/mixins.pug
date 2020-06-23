@@ -1,5 +1,5 @@
-mixin header-nav(args)
-	.header-top
+mixin header-nav(addClass, args)
+	.header-top(class=" header-top--"+ addClass)
 		.container
 			.header-top-content
 				button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
@@ -25,10 +25,14 @@ mixin header-nav(args)
 								p Москва, г. Зеленоград, к. 1130
 								p Открытие до 21-00
 							.contacts-social
-								a(href="#").fab.fa-facebook-f
-								a(href="#").fab.fa-vk
-								a(href="#").fab.fa-instagram
-								a(href="#").fab.fa-odnoklassniki
+								a(href="#")
+									i.fab.fa-facebook-f
+								a(href="#")
+									i.fab.fa-vk
+								a(href="#")
+									i.fab.fa-instagram
+								a(href="#")
+									i.fab.fa-odnoklassniki
 
 					.header-search
 						form(action="")
@@ -37,8 +41,11 @@ mixin header-nav(args)
 							
 							button.search-btn#search-btn
 								i.fas.fa-search
-				//- .chat-button
-				//- 	button Чат с клиникой
+				.contacts-social
+					a(href="#").fab.fa-facebook-f
+					a(href="#").fab.fa-vk
+					a(href="#").fab.fa-instagram
+					a(href="#").fab.fa-odnoklassniki
 mixin ourSpecialistCard
 	.card-doctor
 		.card-img
