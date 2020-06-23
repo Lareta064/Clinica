@@ -36,4 +36,15 @@
         mobileMenuToggle.classList.remove('active')
         bodyElement.classList.remove('noscroll')
     })
+    // mobileMenu.addEventListener('click', function (e) {
+    //     console.log(e.target);
+    //     let isDropDown = e.target.hasAttribute('data-role');
+    //     if (isDropDown) {
+    //         e.target.dispatchEvent(new Event("onmouseover"));
+    //     } else {
+    //         this.classList.remove('active')
+    //         mobileMenuToggle.classList.remove('active')
+    //         bodyElement.classList.remove('noscroll')
+    //     }
+    // })
 })();

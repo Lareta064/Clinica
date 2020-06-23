@@ -30,17 +30,17 @@ header.head.head-grey
 	.nav-panel
 		.container
 			.nav-panel-content
-				a(href="#logo")
+				a(href="#").logo
 					img(src="img/logo.png", alt="logo" width="100")
 				.menu-block
 					ul.menu-block__nav.header-nav
 						li
 							a(href="#") Главная
 						li
-							a(href="#") Услуги
+							a(href="#" data-role='dropdown') Услуги
 							.drop-menu
 								.drop-menu-block
-									h4 заголовок
+									h4 Планирование семьи
 									.serv-list
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
@@ -49,7 +49,7 @@ header.head.head-grey
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
 								.drop-menu-block
-									h4 заголовок
+									h4 Планирование семьи
 									.serv-list
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
@@ -58,7 +58,7 @@ header.head.head-grey
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
 								.drop-menu-block
-									h4 заголовок
+									h4 Планирование семьи
 									.serv-list
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
@@ -82,6 +82,6 @@ header.head.head-grey
 								button.search-btn#search-btn
 									i.fas.fa-search
 
-				.header-button.d-none.d-xl-block
-					button.page-button.page-button3(class=" "+ btnClass) Записаться к врачу
+				.header-button.d-none.d-md-block
+					button.page-button.page-button3 Записаться к врачу
 				

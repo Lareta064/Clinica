@@ -3,6 +3,7 @@ header.head.head-green
 	.top-panel
 		.container
 			.top-panel-content
+				
 				.top-panel-contacts
 					.phone-block
 						.phone-block__icon
@@ -23,20 +24,23 @@ header.head.head-green
 					a(href="#").fab.fa-vk
 					a(href="#").fab.fa-instagram
 					a(href="#").fab.fa-odnoklassniki
+
+				button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
+						span toggle menu
 	.nav-panel
 		.container
 			.nav-panel-content
-				a(href="#logo")
+				a(href="#").logo
 					img(src="img/logo.png", alt="logo" width="100")
 				.menu-block
-					ul.menu-block__nav
+					ul.menu-block__nav.header-nav
 						li
-							a(href="#") Главная
+							a(href="index.html") Главная
 						li
-							a(href="#") Услуги
+							a(href="service-page.html" data-role='dropdown') Услуги
 							.drop-menu
 								.drop-menu-block
-									h4 заголовок
+									h4 Планирование семьи
 									.serv-list
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
@@ -45,7 +49,7 @@ header.head.head-green
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
 								.drop-menu-block
-									h4 заголовок
+									h4 Консультация и лечение
 									.serv-list
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
@@ -54,7 +58,7 @@ header.head.head-green
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
 								.drop-menu-block
-									h4 заголовок
+									h4 Планирование семьи
 									.serv-list
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
@@ -63,13 +67,13 @@ header.head.head-green
 										a(href="service-page.html").text-link Андрология
 										a(href="service-page.html").text-link Андрология
 						li
-							a(href="#") Специалисты
+							a(href="specialists.html") Специалисты
 						li
-							a(href="#") Расписание
+							a(href="page-timetable.html") Расписание
 						li
-							a(href="#") Программы
+							a(href="programm-page.html") Программы
 						li
-							a(href="#") Контакты
+							a(href="contacts.html") Контакты
 					.menu-block__search.header-search
 						form
 							.search-input#search-input
@@ -78,5 +82,6 @@ header.head.head-green
 								button.search-btn#search-btn
 									i.fas.fa-search
 
-				.header-button
-					button.page-button.page-button--color(class=" "+ btnClass) Записаться к врачу
+				.header-button.d-none.d-md-block
+					button.page-button.page-button--color Записаться к врачу
+				
