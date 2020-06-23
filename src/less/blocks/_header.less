@@ -35,7 +35,7 @@
 			white-space: nowrap;
 		}
 
-		margin-right: 45px;
+		// margin-right: 45px;
 	}
 
 	.contacts-address {
@@ -67,86 +67,79 @@
 	}
 }
 
-.info-block {
+
+.contacts-block {
 	display: flex;
-	width: 77%;
-	height: 100%;
 	align-items: center;
+}
 
-	@media(max-width:1199px) {
-		// justify-content: space-between;
-	}
+.contacts-phones {
+	position: relative;
+	padding-left: 10px;
 
-	.contacts-block {
-		display: flex;
-		align-items: center;
-	}
+	a {
+		display: block;
+		font-family: @black;
+		font-size: 18px;
+		color: @text;
 
-	.contacts-phones {
-		position: relative;
-		padding-left: 25px;
-
-		a {
-			display: block;
-			font-family: @black;
-			font-size: 18px;
-			color: @text;
-
-			@media(max-width:1199px) {
-				font-size: 15px;
-			}
+		@media(max-width:1199px) {
+			font-size: 15px;
 		}
 
 		&:after {
 			content: '\f095';
 			font-family: 'fontAwesome';
 			position: absolute;
-			left: 0;
-			top: 50%;
+			left: -20px;
+			top: 11px;
 			transform: translateY(-50%);
 			font-size: 16px;
 			color: @btn;
 
 		}
-
-		@media(max-width:1199px) {
-			padding-left: 0;
-
-			&:after {
-				display: none;
-			}
-		}
 	}
 
-	.contacts-address {
-		p {
-			position: relative;
-			padding-left: 25px;
-		}
 
-		p:first-child:after {
-			content: '\f3c5';
-			font-family: 'Font Awesome\ 5 Free';
-			font-weight: 700;
-			position: absolute;
-			left: 0;
-			top: 0px;
 
-			font-size: 14px;
-			color: @btn;
-		}
+	@media(max-width:1199px) {
+		padding-left: 0;
 
-		p:last-child:after {
-			content: '\f017';
-			font-family: 'fontAwesome';
-			position: absolute;
-			left: 0;
-			top: 0px;
-			font-size: 14px;
-			color: @btn;
+		&:after {
+			display: none;
 		}
 	}
 }
+
+.contacts-address {
+	p {
+		position: relative;
+		padding-left: 25px;
+	}
+
+	p:first-child:after {
+		content: '\f3c5';
+		font-family: 'Font Awesome\ 5 Free';
+		font-weight: 700;
+		position: absolute;
+		left: 0;
+		top: 0px;
+
+		font-size: 14px;
+		color: @btn;
+	}
+
+	p:last-child:after {
+		content: '\f017';
+		font-family: 'fontAwesome';
+		position: absolute;
+		left: 0;
+		top: 0px;
+		font-size: 14px;
+		color: @btn;
+	}
+}
+
 
 .header-content {
 	display: flex;

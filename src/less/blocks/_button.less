@@ -9,6 +9,7 @@
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
+	font-family: 'Lato Bold';
 	transition: background 0.3s;
 
 	@media(max-width: 1199px) {
@@ -67,6 +68,7 @@
 	.btn-gradient;
 	color: @white;
 
+
 	&:hover {
 		background: #60cb62;
 		background: -webkit-linear-gradient(right, #60cb62, #60cb62);
@@ -81,6 +83,16 @@
 		background: -moz-linear-gradient(right, #26aa56, #26aa56);
 		background: linear-gradient(to left, #26aa56, #26aa56);
 		.tr;
+	}
+}
+
+.page-button.page-button3 {
+	border: 2px solid @btn;
+	background-color: transparent;
+	color: #393939;
+
+	&:hover {
+		background-color: #ededed;
 	}
 }
 

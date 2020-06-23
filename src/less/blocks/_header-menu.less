@@ -7,13 +7,7 @@
 	}
 }
 
-.header-top.header-top--green {
-	background-color: @btn;
 
-	.contacts-social a {
-		color: #fff;
-	}
-}
 
 .mobile-phone {
 	font-size: 15px;
@@ -40,7 +34,7 @@
 		display: block;
 		min-width: 50px;
 		max-width: 50px;
-		margin-right: 15px;
+		margin-right: 30px;
 
 	}
 
@@ -48,6 +42,7 @@
 
 		min-width: 40px;
 		max-width: 40px;
+		margin-right: 15px;
 
 
 	}
@@ -100,7 +95,7 @@
 .header-nav-item {
 	font-size: 14px;
 	color: @white;
-	// font-family: @black;
+	font-family: 'Lato Black';
 	display: block;
 	padding-left: 16px;
 	padding-right: 16px;
@@ -114,15 +109,30 @@
 		padding-bottom: 10px;
 		line-height: 1.2;
 		margin-right: 0;
+		width: fit-content;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 1px;
+		margin-bottom: 10px;
 	}
 
 	&:hover {
 		background-color: @buttonActive;
 		color: @white;
+
+		@media(max-width:991px) {
+			background-color: transparent;
+			border-bottom: 1px solid #fff;
+		}
 	}
 
 	&.active {
 		background-color: @buttonActive;
+
+		@media(max-width:991px) {
+			background-color: transparent;
+			border-bottom: 1px solid #fff;
+		}
 
 	}
 
@@ -292,13 +302,86 @@
 
 .contacts-block--mobile {
 	.contacts-phones {
+		margin-top: 20px;
+		margin-bottom: 20px;
 
 		a {
 			display: block;
 			font-family: @black;
 			font-size: 18px;
-			color: @text;
+
+			color: #fff;
+
+			@media(max-width:767px) {
+				font-size: 15px;
+				line-height: 2;
+			}
 
 		}
 	}
+
+	.contacts-address {
+		p {
+			padding-left: 0;
+			color: #fff;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+.header-wrapper.header-wrapper--grey {
+	.header-top {
+		background-color: #ededed;
+
+		.contacts-social a {
+			color: #333333;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	.header-nav-item {
+		color: #333333;
+
+		&:hover,
+		&.active {
+			color: #fff;
+		}
+	}
+
+	.search-btn {
+
+		background-color: transparent;
+
+		i {
+
+			color: #969696;
+
+		}
+	}
+
+	.search-input input {
+		background-color: #ededed;
+		color: #333333;
+
+		&::placeholder {
+			color: #333333;
+		}
+	}
+}
+
+.header-wrapper.header-wrapper--green {
+	.header-top {
+		background-color: @btn;
+
+		.contacts-social a {
+			color: #fff;
+		}
+	}
+
 }

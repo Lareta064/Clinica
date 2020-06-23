@@ -1,51 +1,71 @@
-mixin header-nav(addClass, args)
-	.header-top(class=" header-top--"+ addClass)
-		.container
-			.header-top-content
-				button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
-					span toggle menu
-				.mobile-logo
-					a(href="#")
-						img(src="img/logo.png", alt="logo" width="60")
-				.mobile-phone
-					a(href="tel:+74992140000") +7(499) 214-00-00
-				.header-menu
-					
-					nav.header-nav
-						each item in args
-							if item.addClass
-								a(href=""+ item.link class="header-nav-item "+ item.addClass) #{item.title}
-							else
-								a(href=""+ item.link class="header-nav-item") #{item.title}
-						.d-block.d-md-none.contacts-block.contacts-block--mobile
-							.contacts-phones
-								a(href="tel:+74992140000") +7(499) 214-00-00
-								a(href="tel:+74992140000") +7(499) 214-00-00
-							.contacts-address
-								p Москва, г. Зеленоград, к. 1130
-								p Открытие до 21-00
-							.contacts-social
-								a(href="#")
-									i.fab.fa-facebook-f
-								a(href="#")
-									i.fab.fa-vk
-								a(href="#")
-									i.fab.fa-instagram
-								a(href="#")
-									i.fab.fa-odnoklassniki
+mixin header-nav(btnClass, addClass, args)
+	.header-wrapper(class="header-wrapper--"+ addClass)
+		.header-top
+			.container
+				.header-top-content
+					button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
+						span toggle menu
+					.mobile-logo
+						a(href="#")
+							img(src="img/logo.png", alt="logo" width="60")
+					.mobile-phone
+						a(href="tel:+74992140000") +7(499) 214-00-00
+					.header-menu
+						nav.header-nav
+							each item in args
+								if item.addClass
+									a(href=""+ item.link class="header-nav-item "+ item.addClass) #{item.title}					
+								else
+									a(href=""+ item.link class="header-nav-item") #{item.title}
+								
 
-					.header-search
-						form(action="")
-							.search-input#search-input
-								input(type="text" placeholder="Поиск по сайту")
-							
-							button.search-btn#search-btn
-								i.fas.fa-search
-				.contacts-social
-					a(href="#").fab.fa-facebook-f
-					a(href="#").fab.fa-vk
-					a(href="#").fab.fa-instagram
-					a(href="#").fab.fa-odnoklassniki
+							.d-block.d-md-none.contacts-block.contacts-block--mobile
+								.contacts-phones
+									a(href="tel:+74992140000") +7(499) 214-00-00
+									a(href="tel:+74992140000") +7(499) 214-00-00
+								.contacts-address
+									p Москва, г. Зеленоград, к. 1130
+									p Открытие до 21-00
+								.contacts-social
+									a(href="#")
+										i.fab.fa-facebook-f
+									a(href="#")
+										i.fab.fa-vk
+									a(href="#")
+										i.fab.fa-instagram
+									a(href="#")
+										i.fab.fa-odnoklassniki
+
+						.header-search
+							form(action="")
+								.search-input#search-input
+									input(type="text" placeholder="Поиск по сайту")
+								
+								button.search-btn#search-btn
+									i.fas.fa-search
+					.contacts-social
+						a(href="#").fab.fa-facebook-f
+						a(href="#").fab.fa-vk
+						a(href="#").fab.fa-instagram
+						a(href="#").fab.fa-odnoklassniki
+
+		header.d-none.d-md-block
+		.container
+			.header-content
+				
+				a(href="#").logo
+					img(src="img/logo.png", alt="logo")
+				
+				.contacts-phones
+					a(href="tel:+74992140000") +7(499) 214-00-00
+					//- a(href="tel:+74992140000") +7(499) 214-00-00
+				.contacts-address
+					p Москва, г. Зеленоград, к. 1130
+					p Открытие до 21-00
+					
+				.d-none.d-md-block.header-button
+					button.page-button(class=" "+ btnClass) Записаться к врачу
+
 mixin ourSpecialistCard
 	.card-doctor
 		.card-img
