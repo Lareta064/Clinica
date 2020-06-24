@@ -35,8 +35,34 @@ $(document).ready(function () {
     $('.banner-wrapper2').owlCarousel({
         items: 1
     });
+
+
     $(function () {
-        var owl = $('.programms-carousel');
+        let sliderLabels = document.querySelector('.programms-slider__left');
+        let sliderLabelItem = sliderLabels.querySelectorAll('.banner-label');
+        let owl = document.querySelectorAll('.programms-carousel');
+
+
+        for (let item of sliderLabelItem) {
+            item.addEventListener('click', function () {
+                for (let el of sliderLabelItem) {
+                    el.classList.remove('active');
+                    this.classList.add('active');
+                    let labelData = this.getAttribute('data-toggle');
+
+                    for (let item of owl) {
+                        item.classList.remove('active');
+                        let owlData = item.getAttribute('data-index');
+
+                        if (labelData == owlData) {
+                            item.classList.add('active');
+                        }
+                    }
+                }
+            })
+        }
+
+
         owl.owlCarousel({
 
             items: 1,
