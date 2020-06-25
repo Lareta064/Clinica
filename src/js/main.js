@@ -39,7 +39,6 @@ $(document).ready(function () {
         var owl = $('.programms-carousel');
 
         owl.owlCarousel({
-
             items: 1,
             nav: true,
             dots: false,
@@ -52,7 +51,7 @@ $(document).ready(function () {
             var element = event.target; // DOM element, in this example .owl-carousel
             var items = event.item.count; // Number of items
             var item = event.item.index + 1; // Position of the current item
-            $('#counter').html("<span>" + item + " </span>/<span>" + items + " </span>")
+            $('.counter').html("<span>" + item + " </span>/<span>" + items + " </span>")
         }
     });
 
@@ -223,15 +222,17 @@ $(document).ready(function () {
 
     // dropdown aside-panel label-block
     const asidePanel = document.querySelector('.aside-panel');
-    let labelBlockAsidePanel = asidePanel.querySelectorAll('.label-block');
-    let labelBlockHead = asidePanel.querySelectorAll('.drop-block-head');
-    console.log(labelBlockAsidePanel);
-    console.log(labelBlockHead);
-    for (let item of labelBlockHead) {
-        item.addEventListener('click', function () {
-            this.nextElementSibling.classList.toggle('active');
-        })
+    if (asidePanel) {
+        let labelBlockAsidePanel = asidePanel.querySelectorAll('.label-block');
+        let labelBlockHead = asidePanel.querySelectorAll('.drop-block-head');
+
+        for (let item of labelBlockHead) {
+            item.addEventListener('click', function () {
+                this.nextElementSibling.classList.toggle('active');
+            })
+        }
     }
+
 
 
 });

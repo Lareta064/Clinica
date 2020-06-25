@@ -3,43 +3,110 @@ section.programms-slider
 		.section-head
 			h2.section-title Комплексные экспресс программы
 			a(href="#").text-link Смотреть все программы
-		
 		.programms-slider-wrapper
-			.programms-slider__left
-				.banner-label.banner-label2
-					p Программы для&nbsp;всей семьи
-				.banner-label.banner-label2
-					p Программы для&nbsp;всей семьи
-				.banner-label.banner-label2
-					p Программы для&nbsp;всей семьи
-				.banner-label.banner-label2
-					p Программы для&nbsp;всей семьи
-				.banner-label.banner-label2
-					p Программы для&nbsp;всей семьи
-					
-			.programms-carousel.owl-carousel
-				.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
-					.programm-card__text
-						.label
-							p  Программа
-						h4 Моя семья
-						p Годовая программа обслуживания Вашей семьи
-						.price
-							p от 30 000 р
-				.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
-					.programm-card__text
-						.label
-							p  Программа
-						h4 Моя семья
-						p Годовая программа обслуживания Вашей семьи
-						.price
-							p от 30 000 р
-				.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
-					.programm-card__text
-						.label
-							p  Программа
-						h4 Моя семья
-						p Годовая программа обслуживания Вашей семьи
-						.price
-							p от 30 000 р
-			#counter
+			nav.programm-nav.nav.nav-tabs(role="tablist")
+				a.nav-item.nav-link.active.banner-label.banner-label2(data-toggle="tab" href="#programma1" role="tab" aria-controls="nav-one" aria-selected="true")
+					p Семейные программы
+				a.nav-item.nav-link.banner-label.banner-label2(data-toggle="tab" href="#programma2" role="tab" aria-controls="nav-two" aria-selected="false")
+					p Семейные программы
+				a.nav-item.nav-link.banner-label.banner-label2(data-toggle="tab" href="#programma3" role="tab" aria-controls="nav-two" aria-selected="false")
+					p Семейные программы
+				a.nav-item.nav-link.banner-label.banner-label2(data-toggle="tab" href="#programma4" role="tab" aria-controls="nav-two" aria-selected="false")
+					p Семейные программы
+				a.nav-item.nav-link.banner-label.banner-label2(data-toggle="tab" href="#programma5" role="tab" aria-controls="nav-two" aria-selected="false")
+					p Семейные программы
+			.tab-content
+				#programma1.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="programma1-tab")
+					.programms-carousel.owl-carousel
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 10 000 р
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 10 000 р
+					.counter
+
+				#programma2.tab-pane.fade(role="tabpanel" aria-labelledby="programma2-tab")
+					.programms-carousel.owl-carousel
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 20 000 р
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 20 000 р
+					.counter
+				#programma3.tab-pane.fade(role="tabpanel" aria-labelledby="programma3-tab")
+					.programms-carousel.owl-carousel
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 30 000 р
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 30 000 р
+					.counter
+				#programma4.tab-pane.fade(role="tabpanel" aria-labelledby="programma4-tab")
+					.programms-carousel.owl-carousel
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 40 000 р
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 40 000 р
+				#programma5.tab-pane.fade(role="tabpanel" aria-labelledby="programma5-tab")
+					.programms-carousel.owl-carousel
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 50 000 р
+						.programms-carousel__item(style="background-image: url(img/programm1.jpg)")
+							.programm-card__text
+								.label
+									p  Программа
+								h4 Моя семья
+								p Годовая программа обслуживания Вашей семьи
+								.price
+									p от 50 000 р
