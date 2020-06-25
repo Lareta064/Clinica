@@ -13,7 +13,7 @@ $(document).ready(function () {
             searchInput.classList.toggle('active');
             this.closest('.header-search').classList.toggle('active');
         }
-    })
+    });
 
     /*SLIDER - BANNER */
 
@@ -35,33 +35,8 @@ $(document).ready(function () {
     $('.banner-wrapper2').owlCarousel({
         items: 1
     });
-
-
     $(function () {
-        let sliderLabels = document.querySelector('.programms-slider__left');
-        let sliderLabelItem = sliderLabels.querySelectorAll('.banner-label');
-        let owl = document.querySelectorAll('.programms-carousel');
-
-
-        for (let item of sliderLabelItem) {
-            item.addEventListener('click', function () {
-                for (let el of sliderLabelItem) {
-                    el.classList.remove('active');
-                    this.classList.add('active');
-                    let labelData = this.getAttribute('data-toggle');
-
-                    for (let item of owl) {
-                        item.classList.remove('active');
-                        let owlData = item.getAttribute('data-index');
-
-                        if (labelData == owlData) {
-                            item.classList.add('active');
-                        }
-                    }
-                }
-            })
-        }
-
+        var owl = $('.programms-carousel');
 
         owl.owlCarousel({
 
@@ -164,11 +139,11 @@ $(document).ready(function () {
     });
 
     // переставить сайдбар
-    const asideLeft = document.querySelector('.aside-left');
-    if (asideLeft) {
-        const mainBlock = asideLeft.querySelector('.col-lg-9');
-        mainBlock.classList.add('order-lg-2')
-    }
+    // const asideLeft = document.querySelector('.aside-left');
+    // if (asideLeft) {
+    //     const mainBlock = asideLeft.querySelector('.col-lg-9');
+    //     mainBlock.classList.add('order-lg-1')
+    // }
 
     //-сертификаты врача слайдер
     let sertificates = $('.persone-sert-slider');
@@ -195,7 +170,7 @@ $(document).ready(function () {
 
         })
     }
-    const selectBlock = document.querySelectorAll('.select-block')
+    const selectBlock = document.querySelectorAll('.select-block');
 
     for (let i = 0; i < selectBlock.length; i++) {
 
@@ -246,4 +221,17 @@ $(document).ready(function () {
         })
     }
 
-})
+    // dropdown aside-panel label-block
+    const asidePanel = document.querySelector('.aside-panel');
+    let labelBlockAsidePanel = asidePanel.querySelectorAll('.label-block');
+    let labelBlockHead = asidePanel.querySelectorAll('.drop-block-head');
+    console.log(labelBlockAsidePanel);
+    console.log(labelBlockHead);
+    for (let item of labelBlockHead) {
+        item.addEventListener('click', function () {
+            this.nextElementSibling.classList.toggle('active');
+        })
+    }
+
+
+});

@@ -1,5 +1,6 @@
 .specialists {
 	padding-top: 0;
+	padding-bottom: 60px;
 
 	.search-group {
 		margin-bottom: 25px;
@@ -21,13 +22,25 @@
 		padding-left: 8px;
 	}
 
+	@media(max-width:991px) {
+		padding: 0;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
+
+		@media(max-width:767px) {
+			margin-bottom: 10px;
+		}
 	}
 
 	.label-block {
 		max-height: 600px;
 		overflow: auto;
+
+		@media(max-width:991px) {
+			max-height: 300px;
+		}
 	}
 
 	h3 {
@@ -35,9 +48,68 @@
 		font-family: 'Lato Heavy';
 		margin-bottom: 14px;
 
+		@media(max-width:991px) {
+			margin-bottom: 0;
+		}
+
 	}
 }
 
 .aside-panel_transparent {
 	background-color: transparent;
+}
+
+// .aside-panel.aside-panel--flex {
+// 	display: flex;
+// 	flex-direction: column;
+
+// 	@media(max-width:991px) {
+// 		flex-direction: row;
+// 	}
+// }
+.aside-panel {
+	@media(max-width:991px) {
+		margin-bottom: 30px;
+	}
+
+	@media(max-width:767px) {
+		margin-bottom: 15px;
+	}
+}
+
+.aside-panel .checkbox-group {
+	.drop-block-head {
+		position: relative;
+
+		@media(max-width:991px) {
+			height: 50px;
+			display: flex;
+			align-items: center;
+			padding-left: 20px;
+		}
+
+		i {
+			position: absolute;
+			top: 15px;
+			right: 20px;
+			font-size: 20px;
+			display: none;
+
+			@media(max-width:991px) {
+				display: block;
+			}
+		}
+	}
+
+	.label-block {
+		@media(max-width:991px) {
+			display: none;
+			padding-left: 20px;
+			padding-right: 10px;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
 }

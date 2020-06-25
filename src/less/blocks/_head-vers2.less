@@ -240,6 +240,8 @@
 		box-shadow: 0px 0px 49px 0px rgba(0, 1, 2, 0.25);
 		z-index: 2;
 
+
+
 		.drop-menu-block {
 			margin-right: 50px;
 		}
@@ -320,6 +322,10 @@
 
 				.drop-menu {
 					display: flex;
+
+					@media(max-width:1199px) {
+						display: none;
+					}
 				}
 
 				.drop-menu a {

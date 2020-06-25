@@ -6,17 +6,29 @@ mixin header-nav(btnClass, addClass, args)
 					button.cmn-toggle-switch.cmn-toggle-switch__htx#nav-menu-toggle
 						span toggle menu
 					.mobile-logo
-						a(href="#")
+						a(href="index.html")
 							img(src="img/logo.png", alt="logo" width="60")
 					.mobile-phone
 						a(href="tel:+74992140000") +7(499) 214-00-00
 					.header-menu
-						nav.header-nav
+						ul.header-nav
 							each item in args
 								if item.addClass
-									a(href=""+ item.link class="header-nav-item "+ item.addClass) #{item.title}					
+									li
+										a(href=""+ item.link class="header-nav-item "+ item.addClass) #{item.title}	
+										.drop-menu
+											.drop-menu-block
+												h4 Планирование семьи
+												.serv-list
+													a(href="service-page.html").text-link Андрология
+													a(href="service-page.html").text-link Андрология
+													a(href="service-page.html").text-link Андрология
+													a(href="service-page.html").text-link Андрология
+													a(href="service-page.html").text-link Андрология
+													a(href="service-page.html").text-link Андрология				
 								else
-									a(href=""+ item.link class="header-nav-item") #{item.title}
+									li
+										a(href=""+ item.link class="header-nav-item") #{item.title}
 								
 
 							.d-block.d-md-none.contacts-block.contacts-block--mobile
@@ -64,10 +76,7 @@ mixin header-nav(btnClass, addClass, args)
 					p Открытие до 21-00
 					
 				.d-none.d-md-block.header-button
-					button.page-button(class=" "+ btnClass) Записаться к врачу
-
-mixin header-nav2(btnClass, addClass, args)
-	.heder
+					button.page-button(class=" "+ btnClass data-toggle="modal" data-target="#contact-modal1") Записаться к врачу
 
 mixin header3
 	header.head.head-grey
@@ -101,14 +110,14 @@ mixin header3
 		.nav-panel
 			.container
 				.nav-panel-content
-					a(href="#").logo
+					a(href="index.html").logo
 						img(src="img/logo.png", alt="logo" width="100")
 					.menu-block
 						ul.menu-block__nav.header-nav
 							li
-								a(href="#") Главная
+								a(href="index.html") Главная
 							li
-								a(href="#" data-role='dropdown') Услуги
+								a(href="service-page.html" ) Услуги
 								.drop-menu
 									.drop-menu-block
 										h4 Планирование семьи
@@ -138,11 +147,11 @@ mixin header3
 											a(href="service-page.html").text-link Андрология
 											a(href="service-page.html").text-link Андрология
 							li
-								a(href="#") Специалисты
+								a(href="specialists.html") Специалисты
 							li
-								a(href="#") Расписание
+								a(href="page-timetable.html") Расписание
 							li
-								a(href="#") Программы
+								a(href="programm-page.html") Программы
 							li
 								a(href="#") Контакты
 						.menu-block__search.header-search
@@ -154,8 +163,7 @@ mixin header3
 										i.fas.fa-search
 
 					.header-button.d-none.d-md-block
-						button.page-button.page-button3 Записаться к врачу
-
+						button.page-button.page-button3(data-toggle="modal" data-target="#contact-modal2") Записаться к врачу
 
 mixin header4
 	header.head.head-green
@@ -189,7 +197,7 @@ mixin header4
 		.nav-panel
 			.container
 				.nav-panel-content
-					a(href="#").logo
+					a(href="index.html").logo
 						img(src="img/logo.png", alt="logo" width="100")
 					.menu-block
 						ul.menu-block__nav.header-nav
@@ -242,7 +250,7 @@ mixin header4
 										i.fas.fa-search
 
 					.header-button.d-none.d-md-block
-						button.page-button.page-button--color Записаться к врачу
+						button.page-button.page-button--color(data-toggle="modal" data-target="#contact-modal2") Записаться к врачу
 
 mixin ourSpecialistCard
 	.card-doctor
@@ -372,7 +380,9 @@ mixin table(args)
 
 mixin checkboxGroup(title, ...items)
 	.checkbox-group
-		h3 #{title}
+		.drop-block-head
+			i.fas.fa-caret-down
+			h3 #{title}
 		.label-block
 			each item in items
 				label
@@ -500,6 +510,95 @@ mixin datePeriod
 		button.prev-period
 		p 03-10 июня
 		button.next-period
+
+mixin modal2
+	#contact-modal2.contact-modal.modal.fade(tabindex="-1" role="dialog"  aria-hidden="true")
+		.modal-dialog.modal-dialog-centered(role="document")
+			.modal-content
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true")
+						i.far.fa-times-circle
+				
+				.modal-form-title.modal-title--flex
+					.modal-photo
+						img(src="img/doctor3.jpg", alt="photo")
+					.modal-head
+						h3 Запись онлайн
+						p Мария Кравцова
+
+				.modal-body
+					.feedback-form
+						form.contact-form
+							.form-group
+								input(type="text" name="userName" placeholder="ФИО")
+								
+							.form-group
+								input(type="text" name="userPhone"  placeholder="Контактный телефон")
+								
+							.form-group
+								input(type="text" name="userEmail"  placeholder="E-mail")
+							.form-group
+								input(type="text" name="userEmail"  placeholder="E-mail")
+							.form-group
+								input(type="text" name="dateTime"  placeholder="Удобные дата и время")
+							.form-group
+								input(type="text" name="bearthDay"  placeholder="Дата рождения")
+							.form-group
+								textarea(name="message",  rows="3" placeholder="Сообщение")
+							.form-group.agree-text
+								label(class="form-label")
+									input.form-checkbox(class="form-checkbox" type="checkbox" name="agreePolitic")
+									span.custom-checkbox
+									| Я согласен на  #[a(href="#") обработку персональных данных ].
+							.form-group.form-btn
+								button.page-button.page-button--color Отправить
+
+
+mixin modal1
+	#contact-modal1.contact-modal.modal.fade(tabindex="-1" role="dialog"  aria-hidden="true")
+		.modal-dialog.modal-dialog-centered(role="document")
+			.modal-content
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true")
+						i.far.fa-times-circle
+				
+				.modal-form-title.text-center
+					h3 Запись онлайн
+					p Администратор клиники с радостью ответит на ваши вопросы и&nbsp;запишет к нужному специалисту.
+
+				.modal-body
+					.feedback-form
+						form.contact-form
+							.form-group
+								input(type="text" name="userName" placeholder="Ваше имя")
+								
+							.form-group
+								input(type="text" name="userPhone"  placeholder="Контактный телефон")
+								
+							.select-block.form-group
+								i.fas.fa-angle-down.input-arrow
+								input(type="text" name="direction"  value="" placeholder="Выбрать специализацию").filters-form-input
+								.select-block-drop.hide
+									p.select-option(data-value='Аллерголог') Аллерголог
+									p.select-option(data-value='Косметолог') Косметолог
+									p.select-option(data-value='Кардиолог') Кардиолог
+							.select-block.form-group
+								i.fas.fa-angle-down.input-arrow
+								input(type="text" name="doctorName"   placeholder="Специалист").filters-form-input
+								.select-block-drop.hide
+									p.select-option(data-value='Петрова') Петрова Екатерина
+									p.select-option(data-value='Петрова') Петрова Екатерина
+									p.select-option(data-value='Петрова') Петрова Екатерина
+								
+							.form-group
+								input(type="text" name="dateTime"  placeholder="Удобные дата и время")
+							.form-group.agree-text
+								label(class="form-label")
+									input.form-checkbox(class="form-checkbox" type="checkbox" name="agreePolitic")
+									span.custom-checkbox
+									| Я согласен на  #[a(href="#") обработку персональных данных ].
+							.form-group.form-btn
+								button.page-button.page-button--color Отправить
 
 //SVG
 mixin bannerLabel1
