@@ -92,10 +92,9 @@ section.one-programm
 						p * Обращаем Ваше внимание, что сайт не является публичной офертой. Вся информация, представленная на сайте о наших ценах и услугах, носит ознакомительный характер. Для уточнения актуальной информации Вы можете позвонить по телефону +7 (000) 00-00-00.
 					.flex-center
 						.page-button.page-button--color Записаться на консультацию
-					
 			.col-lg-3
 				aside.aside-panel
-					nav.aside-menu
+					nav.aside-menu.d-none.d-lg-block
 						a(href="#about") Врач
 						a(href="#service") Услуги
 						a(href="#timetable") Расписание
@@ -103,13 +102,15 @@ section.one-programm
 						a(href="#sert") Сертификаты
 						a(href="#review") Отзывы
 					.aside-panel_column.aside-panel_transparent
-						h3 Другие программы
-						.cards-block
+						.drop-block-head
+							i.fas.fa-caret-down
+							h3 Другие программы
+						.cards-block.drop-block-body
 							//-карточка программы
 							.card4
 								.card4__img
 									img(src="img/pr1.jpg", alt="img")
-								.card4__text
+								a(href="#").card4__text
 									p Комплексная программа
 									h4 Предоперационный пакет
 									.price
@@ -118,11 +119,12 @@ section.one-programm
 							.card4
 								.card4__img
 									img(src="img/pr2.jpg", alt="img")
-								.card4__text
+								a(href="#").card4__text
 									p Комплексная программа
 									h4 Здоровое сердце
 									.price
 										p 6 900 р
+			
 
 
 

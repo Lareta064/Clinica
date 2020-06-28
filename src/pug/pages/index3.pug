@@ -1,7 +1,8 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header.pug	
+	//HEADER # 3
+	+header3
 	include ../sections/_banner3.pug
 	include ../sections/_programms.pug
 	include ../sections/_our-specialist.pug
@@ -11,6 +12,8 @@ block content
 	include ../sections/_review2.pug
 	include ../sections/_news.pug
 	include ../sections/_partners.pug
-
+	//FOOTER #3
+	include ../sections/_footer3.pug
+	
 block variables
 	-var title = "Главная #3"

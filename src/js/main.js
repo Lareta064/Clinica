@@ -223,7 +223,7 @@ $(document).ready(function () {
     // dropdown aside-panel label-block
     const asidePanel = document.querySelector('.aside-panel');
     if (asidePanel) {
-        let labelBlockAsidePanel = asidePanel.querySelectorAll('.label-block');
+        let labelBlockAsidePanel = asidePanel.querySelectorAll('.drop-block-body');
         let labelBlockHead = asidePanel.querySelectorAll('.drop-block-head');
 
         for (let item of labelBlockHead) {

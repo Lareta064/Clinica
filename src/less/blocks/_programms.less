@@ -122,10 +122,8 @@
 
 .programms-slider-wrapper {
 	position: relative;
-
-
-
 	display: flex;
+	overflow: hidden;
 
 	@media(max-width:767px) {
 		display: block;
@@ -138,7 +136,7 @@
 
 		position: relative;
 		z-index: 2;
-		left: 2px;
+		left: 1px;
 
 		@media(max-width:767px) {
 			flex-direction: row;
@@ -152,6 +150,7 @@
 					writing-mode: tb-rl;
 					transform: rotate(-180deg);
 					padding-top: 30px;
+					width: auto;
 				}
 
 
@@ -162,7 +161,7 @@
 				right: unset;
 				top: unset;
 				bottom: 20px;
-				left: 38%;
+				left: 40%;
 				transform: rotate(-225deg) translateY(-50%);
 			}
 

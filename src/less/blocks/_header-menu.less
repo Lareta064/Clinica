@@ -438,6 +438,7 @@
 		.contacts-social a {
 			color: #333333;
 
+
 			&:hover {
 				color: #fff;
 			}
@@ -446,6 +447,15 @@
 
 	.header-nav-item {
 		color: #333333;
+
+		@media(max-width:991px) {
+			color: #fff;
+
+			&.active {
+				border-bottom: 0px;
+			}
+		}
+
 
 		&:hover,
 		&.active {

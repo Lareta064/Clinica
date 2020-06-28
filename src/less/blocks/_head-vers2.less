@@ -364,6 +364,7 @@
 			transition: .5s;
 			background-color: #62cc62;
 			height: 100vh;
+			z-index: 99;
 		}
 	}
 
@@ -404,6 +405,10 @@
 
 			a {
 				color: #494949;
+
+				&:hover {
+					color: @btn;
+				}
 			}
 
 			li:hover,
@@ -450,4 +455,28 @@
 		}
 	}
 
+}
+
+.header-wrapper--grey {
+
+	.cmn-toggle-switch span,
+	.cmn-toggle-switch span:after,
+	.cmn-toggle-switch span:before {
+		background-color: @btn;
+	}
+
+	.cmn-toggle-switch__htx.active span {
+		background-color: transparent;
+	}
+
+	.mobile-phone a {
+
+		color: #494949;
+	}
+
+	@media(max-width:767px) {
+		.header-content {
+			display: none;
+		}
+	}
 }

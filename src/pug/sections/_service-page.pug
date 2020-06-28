@@ -53,13 +53,28 @@ section.service-page
 							button.page-button.page-button--color Записаться на консультацию
 					
 
-				.d-none.d-lg-block.col-lg-3
-					aside.aside-panel
-						.aside-panel_column
-							h3 Другие специалисты
-							.cards-group
-								+smallCard
-								+smallCard
-								+smallCard
-								+smallCard
-								+smallCard
+				.col-lg-3
+					aside.aside-panel.aside-panel--bottom
+						.aside-panel_column.aside-panel_transparent
+							.drop-block-head
+								i.fas.fa-caret-down
+								h3 Другие программы
+							.cards-block.drop-block-body
+								//-карточка программы
+								.card4
+									.card4__img
+										img(src="img/pr1.jpg", alt="img")
+									.card4__text
+										p Комплексная программа
+										h4 Предоперационный пакет
+										.price
+											p 5 900 р
+								//-карточка программы
+								.card4
+									.card4__img
+										img(src="img/pr2.jpg", alt="img")
+									.card4__text
+										p Комплексная программа
+										h4 Здоровое сердце
+										.price
+											p 6 900 р

@@ -383,7 +383,7 @@ mixin checkboxGroup(title, ...items)
 		.drop-block-head
 			i.fas.fa-caret-down
 			h3 #{title}
-		.label-block
+		.label-block.drop-block-body
 			each item in items
 				label
 					input(type="checkbox" name="")
@@ -399,7 +399,7 @@ mixin specialistCard
 			.text-14
 				p Гинеколог, Репродуктолог, Врач центра планирования семьи, Гинеколог
 		.card-btn
-			.page-button.page-button2 Записаться к врачу
+			.page-button.page-button2(data-toggle="modal" data-target="#contact-modal2") Записаться к врачу
 mixin timeCard
 	.time-card-wrapper
 		.date-cell.text-center Cp, 03.06
